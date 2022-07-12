@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: android;
+    src: url(fontes/idroid.otf) format("opentype"); 
+}
+
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    background-color: #E9E6C3;
+}
+.android{
+    font-family: android;
+}
+.link{
+    color: #09351b;
+    text-decoration: none;
+    background-color: #83e1ad;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.link::after{
+    content: '\00A0\1F517';
+}
+.paragrafo{
+    text-indent:15px;
+}
+p{
+    margin-bottom: 30px;
+}
+img{
+    width: 100%;
+}
+strong{
+    color: #1a5c37;
+}
+#aeh{
+    width: 300px;
+    margin: auto;
+    display: block;
+}
+.nav{
+    margin-left: 20px;
+}
+
+header{
+    background-image: linear-gradient(to top, #03381B, #176F3C, #258e57);
+    color: white;
+    height: 210px;
+}
+h1{
+margin-top: 0px;
+padding-top: 30px;
+}
+header > p,h1{
+    text-align: center;
+    text-shadow: 2px 2px 5px  rgb(82, 82, 82);
+}
+header > p{
+    margin-bottom: 0px;
+}
+nav > a{
+    color: rgb(154, 209, 163);
+    text-decoration: none;
+    margin-left: 4px;
+    padding: 8px;
+    font-size: 14px;
+}
+nav{
+    padding-top: 35px;
+    font-weight: bold;
+}
+nav > a:hover{
+    background-color: #51af7f;
+    color: black;
+    border-radius: 4px;
+    text-decoration: underline;
+    transition-duration: 0.5s;
+}
+
+
+main{
+    background-color: white;
+    min-width: 310px;
+    max-width: 950px;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 0px 0px 10px  gray;
+    border-radius: 0px 0px 10px 10px;
+}
+h2{
+    color: #1d332c;
+}
+h4{
+    color: #0d4d28;
+    background-image: linear-gradient(to right, #81d1a8, transparent);
+    text-indent: 10px;
+    padding: 3px;
+}
+main > P{
+    line-height: 30px;
+    text-align: justify;
+}
+.video{
+    background-color: #063d1e;
+    padding: 20px;
+    margin: 0px -10px ;
+    position: relative;
+    padding-bottom: 40%;
+}
+iframe{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+}
+
+aside{
+    background-color: #83e1ad;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 30px;
+}
+h5{
+    background-color: #1A5C37;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+    margin: -5px;
+    padding: 5px;
+}
+aside > p{
+    text-align: justify;
+}
+ul{
+    columns: 2;
+    list-style-type: '\2714\00A0\00A0';
+}
+
+
+footer{
+    background-color: #134428;
+    color: white;
+    margin-top: 20px;
+}
+footer > p{
+    text-align: center;
+    margin: 0px;
+    padding: 5px;
+}

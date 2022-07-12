@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <!--o arquivo não pode ter espaço no nome-->
+    <picture>
+      <source media="(min-width: 1025px)" srcset="imagens/tamanho-g.png" type="image/png">
+       <source media="(min-width: 725px)" srcset="imagens/tamanho-m.png" type="image/png">
+        <img src="imagens/tamanho-p.png" alt="Imagem flexível">
+    </picture>
+</body>
+<h1>midias</h1>
+<h2>videos hospedados no site</h2>
+<p>reprodução de audio</p>
+<audio preload="metadata"  controls loop >
+    <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+    <source src="midia/guanacast-33.ogg" type="audio/ogg">
+    <source src="midia/guanacast-33.wav" type="audio/wav">
+    <p>infelismante mas o seu navegador nao consegue reproduzir o audio <a href="midia/guanacast-33.mp3" download="midia/guanacast-33.mp3">clique aqui</a></p>
+</audio> <br>
+
+<video width="600" controls poster="imagens/limoes-capa.png" loop >
+    <source src="midia/video.mp4" type="video/mp4">
+    <source src="midia/meu-video.webm" type="video/webm">
+    <source src="midia/meu-video.ogv" type="video/ogg">
+    <p>seu navegador nao e capaz de reproduzir o video <a href="midia/video.mp4">clique aqui</a></p>
+</video>
+<h2>videos hospedados fora do site</h2>
+<p>video do youtube</p>
+<iframe width="600" height="330" src="https://www.youtube.com/embed/CAYDRIbXFAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: teste;
+    src: url(fonts/Alice\ in\ Wonderland.ttf) format('truetype');
+    /*
+    tipos de format
+    -opentype(otf)
+    -truetype(ttf)
+    */
+}
+body{
+    font-family: teste;
+    font-size: 2em;
+}
+
