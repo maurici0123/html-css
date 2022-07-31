@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: passion;
+    src: url(fonts/GoogleFonts-PassionOne-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: sriracha;
+    src: url(fonts/Sriracha-Regular.ttf) format("truetype"); 
+}
+
+:root{
+    --font1: verdana, geneva, tahoma, sans-serif;
+
+    --font2: 'passion', cursive;
+
+    --font3: 'sriracha', cursive;
+}
