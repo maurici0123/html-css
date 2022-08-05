@@ -11,7 +11,69 @@
 }
 
 :root{
-    --font1: verdana, geneva, tahoma, sans-serif;
-    --font2: 'passion', cursive;
-    --font3: 'sriracha', cursive;
+    --font1: 'passion', cursive;
+    --font2: 'sriracha', cursive;
+}
+
+
+h1,footer > p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+h1{
+    font-variant: small-caps;
+}
+
+
+.image{
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 20px;
+    line-height: 2em;
+    font-family: var(--font2);
+}
+.image > p{
+    background-color: rgba(128, 128, 128, 0.473);
+    width: 350px;
+    padding: 30px;
+}
+.normal{
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 20px;
+    line-height: 2em;
+    font-family: var(--font2);
+}
+
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+footer > p{
+    margin: 0px;
 }
