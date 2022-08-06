@@ -1,22 +1,19 @@
 @charset "UTF-8";
-
 @font-face {
     font-family: passion;
     src: url(fonts/GoogleFonts-PassionOne-Regular.ttf) format("truetype");
 }
-
 @font-face {
     font-family: sriracha;
     src: url(fonts/Sriracha-Regular.ttf) format("truetype"); 
 }
-
 :root{
     --font1: 'passion', cursive;
     --font2: 'sriracha', cursive;
 }
 
 
-h1,footer > p{
+header > p,footer > p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
@@ -36,34 +33,33 @@ header{
     background-color: black;
     color: white;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 h1{
     font-variant: small-caps;
+    font-size: 10vw;
+    font-family: var(--font1);
+    margin: 20px;
 }
 
 
+section{
+    font-family: var(--font2);
+    line-height: 2em;
+    padding-left: 25px;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    font-size: 3vw;
+}
 .image{
     background-color: rgb(48, 48, 48);
     color: white;
-    padding-top: 7%;
-    padding-bottom: 7%;
-    padding-left: 20px;
-    line-height: 2em;
-    font-family: var(--font2);
 }
 .image > p{
     background-color: rgba(128, 128, 128, 0.473);
-    width: 350px;
-    padding: 30px;
-}
-.normal{
-    padding-top: 7%;
-    padding-bottom: 7%;
-    padding-left: 20px;
-    line-height: 2em;
-    font-family: var(--font2);
+    padding: 10px;
+    display: inline-block;
 }
 
 
