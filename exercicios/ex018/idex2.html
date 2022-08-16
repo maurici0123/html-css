@@ -15,6 +15,7 @@
         table{
             border-collapse: collapse;
             width: 400px;
+            position: relative;
         }
         td,th{
             border: 2px solid black;
@@ -29,6 +30,20 @@
             font-size: 1.5em;
             padding: 20px;
             background-color: silver;
+        }
+        tbody > tr:nth-child(odd){
+            background-color: lightgray;
+        }
+        tbody > tr:nth-child(even){
+            background-color: lightslategrey;
+        }
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: rgb(61, 61, 61);
+        }
+        p{
+            width: 50vw;
         }
     </style>
 </head>
@@ -162,5 +177,10 @@
             </tr>
         </tfoot>
     </table>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, omnis obcaecati aspernatur ex delectus similique? Esse earum, veniam repellendus mollitia tenetur atque dolor, cumque, facere nam magnam rerum a odit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus eos adipisci culpa et magnam ratione maxime deserunt, esse quaerat quod non quia fugiat expedita libero, architecto ducimus! Sequi, exercitationem eveniet Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quae ipsa? Hic fuga nemo debitis enim eaque, nulla amet quaerat eveniet tempora maxime officiis assumenda incidunt, ratione mollitia harum laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quos porro. Nihil cumque ab minima pariatur delectus atque architecto odit aliquid perspiciatis error nam recusandae ipsum, dignissimos magnam commodi ad. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, dignissimos vitae, obcaecati minus odio doloremque nesciunt porro a nostrum ut deleniti, repudiandae omnis! Sit animi magni itaque repellendus, exercitationem officia.</p><br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, omnis obcaecati aspernatur ex delectus similique? Esse earum, veniam repellendus mollitia tenetur atque dolor, cumque, facere nam magnam rerum a odit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus eos adipisci culpa et magnam ratione maxime deserunt, esse quaerat quod non quia fugiat expedita libero, architecto ducimus! Sequi, exercitationem eveniet Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quae ipsa? Hic fuga nemo debitis enim eaque, nulla amet quaerat eveniet tempora maxime officiis assumenda incidunt, ratione mollitia harum laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quos porro. Nihil cumque ab minima pariatur delectus atque architecto odit aliquid perspiciatis error nam recusandae ipsum, dignissimos magnam commodi ad. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, dignissimos vitae, obcaecati minus odio doloremque nesciunt porro a nostrum ut deleniti, repudiandae omnis! Sit animi magni itaque repellendus, exercitationem officia.</p><br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, omnis obcaecati aspernatur ex delectus similique? Esse earum, veniam repellendus mollitia tenetur atque dolor, cumque, facere nam magnam rerum a odit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus eos adipisci culpa et magnam ratione maxime deserunt, esse quaerat quod non quia fugiat expedita libero, architecto ducimus! Sequi, exercitationem eveniet Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quae ipsa? Hic fuga nemo debitis enim eaque, nulla amet quaerat eveniet tempora maxime officiis assumenda incidunt, ratione mollitia harum laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quos porro. Nihil cumque ab minima pariatur delectus atque architecto odit aliquid perspiciatis error nam recusandae ipsum, dignissimos magnam commodi ad. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, dignissimos vitae, obcaecati minus odio doloremque nesciunt porro a nostrum ut deleniti, repudiandae omnis! Sit animi magni itaque repellendus, exercitationem officia.</p><br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, omnis obcaecati aspernatur ex delectus similique? Esse earum, veniam repellendus mollitia tenetur atque dolor, cumque, facere nam magnam rerum a odit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus eos adipisci culpa et magnam ratione maxime deserunt, esse quaerat quod non quia fugiat expedita libero, architecto ducimus! Sequi, exercitationem eveniet Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quae ipsa? Hic fuga nemo debitis enim eaque, nulla amet quaerat eveniet tempora maxime officiis assumenda incidunt, ratione mollitia harum laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quos porro. Nihil cumque ab minima pariatur delectus atque architecto odit aliquid perspiciatis error nam recusandae ipsum, dignissimos magnam commodi ad. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, dignissimos vitae, obcaecati minus odio doloremque nesciunt porro a nostrum ut deleniti, repudiandae omnis! Sit animi magni itaque repellendus, exercitationem officia.</p>
 </body>
 </html>
