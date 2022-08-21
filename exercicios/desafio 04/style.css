@@ -60,6 +60,7 @@ section{
 }
 #img1{
     background-image: url(images/background001.jpg);
+    background-position: center right;
 }
 #img2{
     background-image: url(images/background002.jpg);

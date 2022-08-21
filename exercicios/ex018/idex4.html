@@ -12,7 +12,7 @@
 
         body{
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-color: lightyellow;
+            background-color: rgb(255, 255, 185);
         }
         caption{
             font-size: 2em;
@@ -23,6 +23,7 @@
             box-shadow: inset -5px -5px 10px #000000ba;
             margin: auto;
             margin-top: 30vh;
+            background-color: rgba(255, 255, 224, 0.616);
             
         }
         td, th{
@@ -30,6 +31,23 @@
             padding: 10px;
         }
         
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        #op{
+            margin: auto;
+            margin-top: 20px;
+            background-color: lightgray;
+            width: 8vw;
+            padding: 0px;
+            box-shadow: 3px 3px 3px lightgray;
+        }
+        div{
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+        }
     </style>
 </head>
 <body>
@@ -37,14 +55,14 @@
         <caption>filmes favoritos</caption>
         <thead>
             <tr>
-                <th>grupos</th>
-                <th>nomes</th>
-                <th colspan="3">fimes</th>
+                <th scope="col">grupos</th>
+                <th scope="col">nomes</th>
+                <th colspan="3" scope="colgroup">fimes</th>
             </tr>
         </thead>
         <tbody>        
             <tr>
-                <td rowspan="3" class="h">mulheres</td>
+                <td rowspan="3" class="h" scope="rowgroup">mulheres</td>
                 <td>Ana Maria Santos</td>
                 <td>Alien</td>
                 <td>Rambo</td>
@@ -63,7 +81,7 @@
                 <td>Big Hero</td>
             </tr>
             <tr>
-                <td rowspan="3" class="h">homens</td>
+                <td rowspan="3" class="h" scope="rowgroup">homens</td>
                 <td>Bruno Mendonça</td>
                 <td>Intocaveis</td>
                 <td>Amnesia</td>
@@ -83,5 +101,26 @@
             </tr>
         </tbody>
     </table>
+
+    <div id="op">
+        <div>
+            <a href="idex.html">tabela Nº1</a>
+        </div>
+        <div>
+            <a href="idex2.html">tabela Nº2</a>
+        </div>
+        <div>
+            <a href="idex3.html">tabela Nº3</a>
+        </div>
+        <div>
+            <a href="idex4.html">tabela Nº4</a>
+        </div>
+        <div>
+            <a href="idex5.html">tabela Nº5</a>
+        </div>
+        <div>
+            <a href="idex6.html">tabela Nº6</a>
+        </div>
+    </div>
 </body>
 </html>
