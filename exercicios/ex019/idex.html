@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+    <style>
+        h1,h2{
+            text-align: center;
+        }
+        iframe{
+            width: 400px;
+            height: 500px;
+            border: 2px solid black;
+            display: block;
+            margin: auto;
+        }
+       nav{
+        margin: auto;
+       }
+       a{
+        display: block;
+        text-align: center;
+       }
+    </style>
+</head>
+<body>
+    <h1>iframe</h1>
+    <iframe src="https://www.cursoemvideo.com/" frameborder="0"><a href="https://www.cursoemvideo.com/">curso em video</a></iframe>
+
+<h2>iframe local</h2>
+<iframe src="pag2.html" frameborder="0">nao foi possivel exibir o iframe</iframe>
+
+<h2>navegação de iframe</h2>
+<nav>
+    <a href="iframes/iframe.html" target="tela">iframe 1</a>
+    <a href="iframes/iframe2.html" target="tela">iframe 2</a>
+</nav>
+<iframe name="tela" src="" frameborder="0">nao foi possivel exibir o iframe</iframe>
+</body>
+</html>
