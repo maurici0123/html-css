@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +11,25 @@
             color: black;
             text-shadow: 2px 2px 3px gray;
         }
+        form{
+        margin: auto;
+        width: 350px;
+        padding: 80px;
+        box-shadow: inset 0px 0px 15px black;
+        background: white;
+        }
+        fieldset{
+            padding: 50px;
+        }
     </style>
 </head>
 <body>
     <h1>formulario</h1>
     <hr>
     <form autocomplete="off" method="post">
+        <fieldset>
+
+        <legend>formulario</legend>
         <label for="iname">nome:</label>
         <input type="text" placeholder="nome" name="name" id="iname"> <br><br>
 
@@ -24,6 +37,38 @@
         <input type="text" placeholder="sobrenome" name="sobre" id="isobre"> <br><br>
 
         <input type="submit" value="enviar">
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>form com numeros</legend>
+
+            <p>
+                <label for="inome">nome:</label>
+                <input type="text" name="nome" id="inome" placeholder="nome completo">
+            </p>
+            <p>
+                <label for="imedia">media:</label>
+                <input type="number" name="media" id="imedia" placeholder="media" step=".1" value="1">
+            </p>
+            <p>
+                <label for="imes">mês:</label>
+                <input type="month" name="mes" id="imes" value="2022-09">
+            </p>
+            <p>
+                <label for="idia">dia:</label>
+                <input type="date" name="dia" id="idia" value="2022-09-18">
+            </p>
+            <p>
+                <label for="ihora">hora:</label>
+                <input type="time" name="hora" id="ihora">
+            </p>
+            <p>
+                <input type="submit" value="enviar">
+                <input type="reset" value="limpar">
+            </p>
+        </fieldset>
     </form>
+
 </body>
 </html>
