@@ -10,10 +10,14 @@
             background-image: linear-gradient(to right, #bbb, #999);
             color: black;
             text-shadow: 2px 2px 3px gray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
         }
         form{
         margin: auto;
-        width: 350px;
+        width: 400px;
         padding: 80px;
         box-shadow: inset 0px 0px 15px black;
         background: white;
@@ -36,7 +40,10 @@
         <label for="isobre">sobrenome:</label>
         <input type="text" placeholder="sobrenome" name="sobre" id="isobre"> <br><br>
 
-        <input type="submit" value="enviar">
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar">
+        </p>
         </fieldset>
         <br>
 
@@ -62,6 +69,87 @@
             <p>
                 <label for="ihora">hora:</label>
                 <input type="time" name="hora" id="ihora">
+            </p>
+            <p>
+                <input type="submit" value="enviar">
+                <input type="reset" value="limpar">
+            </p>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>dados pessoais</legend>
+
+            <p>
+                <label for="iemail">email:</label>
+            <input type="email" name="email id="iemail">
+
+            </p>
+            <p>
+                <label for="itel">telefone:</label>
+                <input type="tel" name="tel" id="itel" placeholder="(xx)xxx-xxx">
+            </p>
+            <p>
+                <input type="submit" value="enviar">
+                <input type="reset" value="limpar">
+            </p>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>esporte favorito</legend>
+
+            <p>
+                <input type="checkbox" name="fut" id="ifutebol" checked>
+                <label for="ifutebol">futebol</label><br>
+
+                <input type="checkbox" name="bas" id="ibasquete">
+                <label for="ibasquete">basquete</label><br>
+
+                <input type="checkbox" name="nat" id="inatação">
+                <label for="inatação">natação</label><br>
+
+                <input type="checkbox" name="ten" id="itenis">
+                <label for="itenis">tenis</label>
+            </p>
+            <p>
+                <input type="submit" value="enviar">
+                <input type="reset" value="limpar">
+            </p>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>sexo</legend>
+
+            <p>
+                <input type="radio" name="sexo" id="imas" value="m">
+                <label for="imas">masculino</label><br>
+
+                <input type="radio" name="sexo" id="ifem" value="f">
+                <label for="ifem">feminino</label>
+            </p>
+            <p>
+                <input type="submit" value="enviar">
+                <input type="reset" value="limpar">
+            </p>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>cor, range, file</legend>
+
+            <p>
+                <label for="icor">cor:</label>
+                <input type="color" name="cor" id="icor">
+            </p>
+            <p>
+                <label for="inivel">nivel:</label>
+                <input type="range" name="nivel" id="inivel">
+            </p>
+            <p>
+                <label for="iarquivo">arquivo:</label>
+                <input type="file" name="arquivo" id="iarquivo">
             </p>
             <p>
                 <input type="submit" value="enviar">
