@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* style da impressora */
+
+html, body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+menu{
+    display: none;
+}

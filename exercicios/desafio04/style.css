@@ -8,8 +8,8 @@
     src: url(fonts/Sriracha-Regular.ttf) format("truetype"); 
 }
 :root{
-    --font1: 'passion', cursive;
-    --font2: 'sriracha', cursive;
+    --font1: passion, cursive;
+    --font2: sriracha, cursive;
 }
 
 

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* style da tela */
+
+main{
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 1px 1px 10px rgba(67, 67, 146, 0.233);
+    border-radius: 5px;
+    margin-top: 10%;
+    padding: 10px;
+    background-color: lightgray;
+}
+header{
+    background-color: lightgray;
+}
+menu{
+    background-color: gray;
+}
+article{
+    background-color: lightgray;
+}

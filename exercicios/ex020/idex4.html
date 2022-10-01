@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        form{
+            margin: auto;
+            width: 400px;
+            padding: 80px;
+            box-shadow: inset 0px 0px 15px black;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>exempos de formularios</h1>
+
+    <form method="post">
+        <fieldset>
+            <p>
+                <label for="inum">numero 1:</label>
+                <input type="number" name="num" id="inum1" min="0" max="50" oninput="isoma.innerHTML = Number(inum1.value) + Number(inum2.value)">
+                
+            </p>
+            <p>
+                <label for="inum">numero 2:</label>
+                <input type="number" name="num" id="inum2" min="0" max="50" oninput="isoma.innerHTML = Number(inum1.value) + Number(inum2.value)">
+            </p>
+            <p>
+                <label for="isoma">soma:</label>
+                <output name="soma" id="isoma">0</output>
+            </p>
+            <p>
+                <input type="submit" value="enviar">
+                <input type="reset" value="limpar">
+            </p>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <p>
+                <label for="inum">numero:</label>
+                <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
+                <output id="ival">5</output>
+            </p>
+            <p>
+                <input type="submit" value="enviar">
+                <input type="reset" value="limpar">
+            </p>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <p>Idade: 
+                <input type="number" name="ano" id="iano" min="0" max="200" oninput="iidade.innerHTML= 2022 - Number(iano.value) ">
+            </p> 
+            <p>
+                Ano de nascimento: <output id="iidade">0</output>
+            </p>
+            <p>
+                <input type="submit" value="enviar">
+                <input type="reset" value="limpar">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
