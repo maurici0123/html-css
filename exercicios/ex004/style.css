@@ -5,15 +5,18 @@ body{
 }
 
 img{
-    width: 600px;
-    margin: 45px;
+    width: 80%;
+    margin: auto;
+    display: block;
+    padding: 10%;
 }
 div{
     background-color: #fff;
-    width: 700px;
+    max-width: 700px;
+    min-width: 400px;
     border-radius: 10px;
     margin: auto;
     margin-top: 70px;
     box-shadow: 5px 5px 5px #144943;
+    height: 90%;
 }
-
