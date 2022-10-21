@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+:root{
+    --cor01: #b43d1f;
+    --cor02: #0d3b66;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body{
+        background-image: linear-gradient(to top, var(--cor02), var(--cor01));
+    }
+    main{
+        width: 80%;
+    }
+    #image{
+        float: left;
+        width:35%;
+        height: 100%;
+        background-image: url(image/pexels-daniel-watson-1487154.jpg);
+    }
+    #form{
+        float:right;
+        width: 65%;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body{
+        background-image: linear-gradient(to top, var(--cor02), var(--cor01));
+    }
+    main{
+        width: 880px;
+    }
+    #image{
+    float: left;
+    width: 45%;
+    height: 100%;
+    background-image: url(image/pexels-daniel-watson-1487154.jpg);
+    }
+    #form{
+        float: right;
+        width: 55%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+}
