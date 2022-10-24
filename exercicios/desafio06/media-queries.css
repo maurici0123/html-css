@@ -1,16 +1,11 @@
 @charset "UTF-8";
 
-:root{
-    --cor01: #b43d1f;
-    --cor02: #0d3b66;
-}
-
 @media screen and (min-width: 768px) and (max-width: 992px) {
     body{
-        background-image: linear-gradient(to top, var(--cor02), var(--cor01));
+        background-image: linear-gradient(to top, #0d3b66, #B8B8F3);
     }
     main{
-        height: 90%;
+        height: 80%;
         width: 80%;
     }
     #image{
@@ -28,10 +23,10 @@
 
 @media screen and (min-width: 992px) {
     body{
-        background-image: linear-gradient(to top, var(--cor02), var(--cor01));
+        background-image: linear-gradient(to top, #0d3b66, #B8B8F3);
     }
     main{
-        height: 80%;
+        height: 70%;
         width: 880px;
     }
     #image{

@@ -1,9 +1,6 @@
 @charset "UTF-8";
 
-:root{
-    --cor01: #b43d1f;
-    --cor02: #0d3b66;
-}
+
 
 *{
     margin: 0px;
@@ -13,7 +10,7 @@
 body{
     height: 100vh;
     width: 100vw;
-    background-color: var(--cor02);
+    background-color: #23527e;
     position: relative;
 }
 main{
@@ -27,6 +24,7 @@ main{
     box-sizing: border-box;
     border-radius: 10px;
     overflow: hidden;
+
     transition: width .4s, height .4s;
     transition-timing-function: ease;
 }
@@ -37,41 +35,60 @@ main{
 }
 #form{
     display: block;
-    padding: 10px;
+    padding: 20px;
 }
 label{
     display: none;
+}
+i{
+    color: white;
+    font-size: 2em;
+    padding: 8px;
+    width: 35px;
+    box-sizing: border-box;
+}
+.nome-senha{
+    width: calc(95% - 35px);
+    height: 25px;
+    border-radius: 8px;
+    transform: translateY(-7px);
+    background-color: rgba(193, 225, 255, 0.993);
+    font-size: 1.0em;
+    padding: 0px 3px;
 }
 .camp{
     background-color: #1c3f5f;
     border: 5px;
     margin: 8px 0px;
     height: 40px;
+    border-radius: 8px;
 }
 #submit{
     display: block;
-    width: 80%;
+    width: 82%;
     margin: auto;
-    height: 30px;
+    height: 34px;
     margin-top: 15px;
     background-color:rgb(71, 126, 179);
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    box-sizing: border-box;
 }
 #submit:hover{
-    background-color: rgb(104, 162, 216);
+    background-color: rgb(35, 75, 112);
 }
 a{
     text-decoration: none;
-    height: 30px;
-    border: 2px solid var(--cor02);
+    height: 34px;
+    border: 2px solid #23527e;
     display: block;
-    width: 80%;
+    width: 82%;
     margin: auto;
     text-align: center;
     margin-top: 15px;
     border-radius: 5px;
+    box-sizing: border-box;
     color: black;
 }
 a:hover{
