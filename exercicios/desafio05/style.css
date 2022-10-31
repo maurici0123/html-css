@@ -52,3 +52,8 @@ img:hover{
    transition: transform .3s,  border .5s;
 }
 
+@media screen and (max-width: 460px){
+    #tel{
+        left: 40%;
+    }
+}
