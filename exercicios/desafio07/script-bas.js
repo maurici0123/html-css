@@ -1,7 +1,7 @@
+
 txta = document.getElementById("txta")
 txtb = document.getElementById("txtb")
 txtc = document.getElementById("txtc")
-res = document.getElementById("res")
 s = document.getElementById("s")
 del = document.getElementById("del")
 
@@ -33,4 +33,3 @@ function calcular() {
     }
     
 }
-

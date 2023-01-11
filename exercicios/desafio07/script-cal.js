@@ -1,3 +1,0 @@
-function calcular() {
-    alert('ola')
-}
