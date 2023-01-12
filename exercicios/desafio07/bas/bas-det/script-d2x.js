@@ -3,6 +3,7 @@ txt1 = document.getElementById("txtn1")
 txt2 = document.getElementById("txtn2")
 txt3 = document.getElementById("txtn3")
 txt4 = document.getElementById("txtn4")
+
 r = document.getElementById("res")
 
 function calcular() {
