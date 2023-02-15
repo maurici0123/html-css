@@ -41,3 +41,10 @@ main a div h2{
     color: #fff;
     font-size: 30px;
 }
+
+@media screen and (min-width: 1400px) {
+    
+    main{
+        width: 1120px;
+    }
+}
