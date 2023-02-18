@@ -1,0 +1,38 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    color: rgb(160, 160, 160);
+    line-height: 25px;
+}
+header{
+    text-align: center;
+    padding: 60px;
+    background-image: url(image/bg-header-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    padding: 40px;
+}
+nav{
+    text-align: center;
+}
+nav a{
+    text-decoration: none;
+}
+h2{
+    text-align: center;
+    margin: 10px;
+}
+.p_for_h2{
+    text-align: center;
+}
+#tablet_cell{
+    display: block;
+    margin: auto;
+    padding-top: 70px;
+}
