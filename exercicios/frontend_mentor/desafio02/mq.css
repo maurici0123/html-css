@@ -1,5 +1,68 @@
-@media screen and (max-width: 940px) {
-    body{
-        background-color: bisque;
+@media screen and (max-width: 980px) {
+
+    h2{
+        margin-top: 80px;
+    }
+    .p_for_h2{
+        padding: 0px 30px;
+    }
+    #computer{
+        display: block;
+        margin: auto;
+        right: 0;
+        width: 70%;
+    }
+    #right_computer{
+        position: relative;
+        text-align: center;
+        margin-left: 0;
+        display: block;
+        padding-top: 100px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    #tablet_cell{
+        width: 70%;
+        margin-top: 60px;
+    }
+    #aside{
+        display: block;
+    }
+    #aside div{
+        margin: auto;
+    }
+    #patro img{
+        display: block;
+        margin: auto;
+        text-align: center;
+        padding: 30px;
+    }
+    footer{
+        display: block;
+        height: 550px;
+    }
+    #logo_footer{
+        display: block;
+        margin: auto;
+        text-align: center;
+        padding: 50px;
+    }
+    #p_footer{
+        display: block;
+    }
+    #p_footer p{
+        display: block;
+        text-align: center;
+        margin: auto;
+        padding: 5px;
+    }
+    #icon_footer{
+        padding: 30px;
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+    #icon_footer svg{
+        padding: 5px 15px;
     }
 }

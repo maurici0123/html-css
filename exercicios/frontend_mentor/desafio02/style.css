@@ -48,7 +48,7 @@ h2{
 .p_for_h2{
     text-align: center;
     margin: auto;
-    width: 800px;
+    max-width: 800px;
     margin-bottom: 110px;
 }
 #tablet_cell{
@@ -61,7 +61,7 @@ h2{
     right: 45px;
     width: 55%;
 }
-#rigth_computer{
+#right_computer{
     margin-top: 50px;
     margin-left: 5%;
     position: absolute;
@@ -70,10 +70,10 @@ h2{
     height: 400px;
     display: inline-block;
 }
-#rigth_computer h3{
+#right_computer h3{
     margin: 10px 0px;
 }
-#rigth_computer p{
+#right_computer p{
     margin-bottom: 50px;
 }
 #aside{
@@ -88,12 +88,22 @@ h2{
     display: block;
     padding: 50px;
 }
+#black_list{
+    padding-bottom: 42px;
+}
 #aside div h3{
     text-align: center;
     margin-bottom: 15px;
 }
 #aside div p{
     text-align: center;
+}
+#patro{
+    text-align: center;
+    margin-top: 80px;
+}
+#patro img{
+   padding: 0px 20px;
 }
 aside nav{
     text-align: center;
@@ -103,7 +113,7 @@ aside nav a{
     text-decoration: none;
 }
 footer{
-    background-color: lightgrey;
+    background-color: rgb(245, 245, 245);
     height: 170px;
     display: flex;
     justify-content: space-between;
@@ -134,8 +144,8 @@ footer{
 
 
 @media screen and (min-width: 935px) and (max-width: 1040px) {
-    #rigth_computer{
-        bottom: -400px;
+    #right_computer{
+        bottom: -300px;
     }
     #icon_footer{
         margin-right: 20px;
