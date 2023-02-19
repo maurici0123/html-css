@@ -58,7 +58,7 @@ h2{
 }
 #computer{
     position: relative;
-    right: 35px;
+    right: 45px;
     width: 55%;
 }
 #rigth_computer{
@@ -104,13 +104,44 @@ aside nav a{
 }
 footer{
     background-color: lightgrey;
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-#logo_aside{
-    width: 70px;
+#logo_footer{
+    margin: 20px 100px 20px 20px;
+    display: inline-block;
+}
+#p_footer{
+    display: inline-block;
+}
+#icon_footer{
+    display: inline-block;
+    margin-right: 70px;
+}
+#icon_footer svg{
+    padding: 5px;
+}
+.p{
+    display: inline-block;
+    margin: 10px 5px;
+    height: 30px;
+    width: 165px;
+    font-size: 1em;
+    color: rgb(110, 110, 110);
 }
 
-@media screen and (min-width: 935px) and (max-width: 1100px) {
+
+@media screen and (min-width: 935px) and (max-width: 1040px) {
     #rigth_computer{
-        bottom: -150px;
+        bottom: -400px;
+    }
+    #icon_footer{
+        margin-right: 20px;
+    }
+    #logo_footer{
+        margin: 20px 10px 20px 20px;
+        display: inline-block;
     }
 }
