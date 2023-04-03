@@ -38,4 +38,7 @@
         min-width: 300px;
         margin: auto;
     }
+    #final{
+        text-align: left;
+    }
 }

@@ -41,7 +41,6 @@ p{
 #form{
     width: 100%;
     min-width: 300px;
-    padding-bottom: 150px;
     display: flex;
 }
 input{
@@ -55,13 +54,13 @@ input{
     border-right: none;
 }
 input:focus{
-    outline: 1px solid #e7a0a9;
+    outline: 0px;
 }
 #error{
     margin-top: 30px;
     width: 35px;
     height: 50px;
-    border-left: 1px solid #fff;
+    border-left: 1px solid #ffffff;
     box-sizing: border-box;
     border-bottom: 2px solid #e7a0a9;
     border-top: 2px solid #e7a0a9;
@@ -99,4 +98,10 @@ button:active{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
+}
+
+#final{
+    display: block;
+    margin-left: 15px;
+    font-size: 14px;
 }
