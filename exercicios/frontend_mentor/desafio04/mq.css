@@ -31,7 +31,7 @@
     }
 }
 
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 1070px) and (min-width: 571px) {
     #back{
         width: 100%;
         height: 350px;
@@ -56,12 +56,78 @@
         width: 100%;
         max-width: none;
         float: none;
-        height: 0;
+        height: auto;
     }
     #container div{
         margin: auto;
         width: 80%;
         max-width: 600px;
         padding: 120px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    #back{
+        width: 100%;
+        height: 260px;
+        display: flex;
+        float: none;
+        justify-content: flex-end;
+    }
+   
+    #div_logo{
+        width: 70px;
+        height: 35px;
+        padding: 20px 0 0 20px;
+    }
+    #circle1{
+        width: 35px;
+        height: 35px;
+    }
+    #circle2{
+        width: 15px;
+        height: 15px;
+    }
+    #card_f{
+        width: 310px;
+        height: 170px;
+        border-radius: 10px;
+        display: inline-block;
+        margin: 125px 95px 0 0;
+        position: absolute;
+        z-index: 1;
+        font-size: 16px;
+    }
+    #number_c{
+        font-size: 17px;
+        padding: 40px 0 15px 0;
+    }
+    #name_c{
+        padding: 0px 65px 0 25px;
+    }
+    #card_b{
+        width: 310px;
+        height: 170px;
+        border-radius: 10px;
+        margin: 30px 15px 0 0 ;
+        position: absolute;
+        font-size: 15px;
+    }
+    #cvc{
+        margin: 75px 0 0 245px;
+    }
+
+    #container{
+        display: block;
+        width: 100%;
+        max-width: none;
+        float: none;
+        height: auto;
+    }
+    #container div{
+        margin: auto;
+        width: 80%;
+        max-width: 600px;
+        padding: 70px 0 0 0;
     }
 }
