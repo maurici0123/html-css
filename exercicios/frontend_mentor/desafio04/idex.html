@@ -30,13 +30,13 @@
 
 
   <div id="container">
-    <div>
+    <div id="form">
       <p>NOME DO TITULAR</p>
       <input placeholder="Jane Apppleseed" type="text" id="name">
-      <span id="error_name">x</span>
+      <span id="error_name"></span>
       <p>NÚMERO DO CARTÃO</p>
       <input placeholder="1234 5678 9123 0000" type="text" id="number">
-      <span id="error_number">x</span>
+      <span id="error_number"></span>
 
       <span id="date">
         <p>EXP. DATA (MM/AA)</p> 
@@ -49,11 +49,17 @@
         <input placeholder="123" type="number" id="cvc_form">
       </span>
 
-      <span  id="error_mm">x</span>
-      <span  id="error_aa">x</span>
-      <span  id="error_cvc">x</span>
+      <span  id="error_mm"></span>
+      <span  id="error_aa"></span>
+      <span  id="error_cvc"></span>
 
       <button id="button">CONFIRMAR</button>
+    </div>
+
+    <div id="confirm">
+      <img src="image/icon-complete.svg" alt="">
+      <h1>OBRIGADO!</h1>
+      <p>adicionamos os dados do seu cartão</p>
     </div>
   </div>
 

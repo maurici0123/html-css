@@ -93,13 +93,13 @@
     height: 100vh;
     font-size: 14px;
 }
-#container div{
+#form{
     width: 400px;
     height: auto;
     font-weight: 400;
     transition-duration: 0.5s;
 }
-#container div p{
+#form p{
     padding: 25px 0 5px 0;
 }
 input{
@@ -120,6 +120,10 @@ input{
     box-sizing: border-box;
     margin: 0 0 10px 0;
     padding: 15px;
+}
+#name:focus, #number:focus, #month:focus, #year:focus, #cvc_form:focus{
+    outline-width: 0;
+    border: 1px solid hsl(278, 94%, 30%);
 }
 #month, #year{
     box-sizing: border-box;
@@ -151,6 +155,7 @@ input{
     display: inline-block;
     color: #f00;
     font-size: 13px;
+    font-weight: lighter;
 }
 #error_mm{
     margin-right: 8px;
@@ -179,4 +184,25 @@ input{
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+#confirm{
+    display: none;
+    text-align: center;
+    margin-top: 90px;
+    transition-duration: 0.5s;
+}
+#confirm img{
+    display: block;
+    margin: auto;
+}
+h1{
+    margin: 40px 0;
+    color: hsl(278, 68%, 11%);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+#confirm p{
+    color: gray;
+    font-size: 18px;
 }

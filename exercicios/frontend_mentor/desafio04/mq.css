@@ -58,11 +58,14 @@
         float: none;
         height: auto;
     }
-    #container div{
+    #form{
         margin: auto;
         width: 80%;
         max-width: 600px;
         padding: 120px 0 0 0;
+    }
+    #confirm{
+        margin-top: 140px;
     }
 }
 
@@ -115,7 +118,7 @@
         font-size: 15px;
     }
     #cvc_c{
-        margin: 75px 0 0 245px;
+        margin: 74px 0 0 245px;
     }
 
     #container{
@@ -125,10 +128,17 @@
         float: none;
         height: auto;
     }
-    #container div{
+    #form{
         margin: auto;
         width: 80%;
         max-width: 600px;
         padding: 70px 0 0 0;
+    }
+
+    #error_mm{
+        width: 92px;
+    }
+    #error_aa{
+        width: 80px;
     }
 }
