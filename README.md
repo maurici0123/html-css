@@ -29,8 +29,9 @@
         <li><a href="https://maurici0123.github.io/html-css/exercicios/ex019/idex.html" style="text-decoration: none;">exercicio 19</a></li>
         <li><a href="https://maurici0123.github.io/html-css/exercicios/ex020/idex.html" style="text-decoration: none;">exercicio 20</a></li>
         <li><a href="https://maurici0123.github.io/html-css/exercicios/ex021/mq01/idex.html" style="text-decoration: none;">exercicio 21</a></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio01/idex.html" style="text-decoration: none;">front-desafio 01</a></li>
+        <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio02/idex.html" style="text-decoration: none;">front-desafio 02</a></li>
+        <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio03/idex.html" style="text-decoration: none;">front-desafio 03</a></li>
+        <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio04/idex.html" style="text-decoration: none;">front-desafio 04</a></li>
+        <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio05/idex.html" style="text-decoration: none;">front-desafio 05</a></li>
     </ul>
