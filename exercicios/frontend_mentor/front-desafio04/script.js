@@ -25,6 +25,7 @@ document.getElementById('button').addEventListener("click", function(){
         document.getElementById('error_name').style.display = 'inline-block'
         document.getElementById('error_name').innerHTML = 'obrigatório'
         document.getElementById('name').style.border = '1px solid hsl(0, 100%, 66%)'
+        vname = false
     }
 
 
@@ -37,6 +38,7 @@ document.getElementById('button').addEventListener("click", function(){
         document.getElementById('error_number').style.display = 'block'
         document.getElementById('error_number').innerHTML = 'número inválido'
         document.getElementById('number').style.border = '1px solid hsl(0, 100%, 66%)'
+        vnumber = false
     }
 
     
@@ -49,6 +51,7 @@ document.getElementById('button').addEventListener("click", function(){
         document.getElementById('error_mm').style.display = 'inline-block'
         document.getElementById('error_mm').innerHTML = 'mês inválido'
         document.getElementById('month').style.border = '1px solid hsl(0, 100%, 66%)'
+        vmonth = false
     }
 
 
@@ -61,6 +64,7 @@ document.getElementById('button').addEventListener("click", function(){
         document.getElementById('error_aa').style.display = 'inline-block'
         document.getElementById('error_aa').innerHTML = 'ano inválido'
         document.getElementById('year').style.border = '1px solid hsl(0, 100%, 66%)'
+        vyear = false
     }
 
 
@@ -73,6 +77,7 @@ document.getElementById('button').addEventListener("click", function(){
         document.getElementById('error_cvc').style.display = 'inline-block'
         document.getElementById('error_cvc').innerHTML = 'apenas 3 digitos'
         document.getElementById('cvc_form').style.border = '1px solid hsl(0, 100%, 66%)'
+        vcvc = false
     }
 
     if (vname==true && vnumber==true  && vmonth==true  && vyear==true && vcvc==true) {
