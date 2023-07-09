@@ -7,7 +7,36 @@
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Calculator app</title>
 </head>
-<body>
+<body id="body">
 
+  <main>
+
+    <div id="header">
+        <p id="header_number">1 2 3</p>
+
+      <div id="header_title">
+        <h4>calc</h4> 
+
+        <div id="header_range"> 
+          <p>THEME</p> <input type="range" min="1" max="3" value="1" id="input"> 
+        </div>
+      </div>
+    </div>
+
+    <div class="screen">
+      <p id="number">399.87</p>
+    </div>
+
+    <div class="container">
+      <button class="number" id="btn7">7</button> <button class="number" id="btn8">8</button> <button class="number" id="btn9">9</button> <button id="btn_del">DEL</button>
+      <button class="number" id="btn4">4</button> <button class="number" id="btn5">5</button> <button class="number" id="btn6">6</button>  <button class="number" id="btn_more">+</button>
+      <button class="number" id="btn1">1</button> <button class="number" id="btn2">2</button> <button class="number" id="btn3">3</button> <button class="number" id="btn_minus">-</button>
+      <button class="number" id="btn_point">.</button> <button class="number" id="btn0">0</button> <button class="number" id="btn_bar">/</button> <button class="number" id="btnx">X</button>
+      <button id="btn_reset">RESET</button> <button id="btn_equal">=</button>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

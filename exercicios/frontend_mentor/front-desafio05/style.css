@@ -1,0 +1,205 @@
+@font-face {
+    font-family: SpaceGrotesk;
+    src: url(font/SpaceGrotesk-VariableFont_wght.ttf) format(truetype);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: SpaceGrotesk, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+body{
+    background: hsl(222, 26%, 31%);
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main{
+    width: 550px;
+}
+
+#header{
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    color: #fff;
+}
+#header_number{
+    text-align: end;
+    margin-right: 6px;
+    letter-spacing: 7px;
+    font-size: 13px;
+    font-weight: 400;
+}
+#header_title{
+    display: flex;
+    justify-content: space-between;
+}
+h4{
+    font-size: 30px;
+    margin-left: 10px;
+}
+#header_range{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+}
+input{
+    margin-left: 30px;
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
+    appearance: none;
+    padding: 5px;
+    background-color: hsl(223, 31%, 20%);
+    cursor: pointer;
+}
+input::-webkit-slider-thumb{
+    appearance: none;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    background-color: hsl(6, 63%, 50%);
+}
+input::-webkit-slider-thumb:active{
+    background-color: hsl(6, 97%, 61%);
+}
+
+.screen{
+    display: grid;
+    justify-content: end;
+    align-items: center;
+    width: 550px;
+    height: 120px;
+    margin: 30px 0px 25px 0px;
+    border-radius: 15px;
+    background-color:  hsl(224, 36%, 15%);
+    color: #fff;
+}
+#number{
+    padding: 15px;
+    font-size: 50px;
+}
+
+.container{
+    background: hsl(223, 31%, 20%);
+    display: grid;
+    padding: 30px;
+    border-radius: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-areas: "b7 b8 b9 b_del"
+                         "b4 b5 b6 b_more"
+                         "b1 b2 b3 b_minus"
+                         "b_point b0 b_bar bx"
+                         "b_reset b_reset b_equal b_equal";
+    gap: 30px 25px;
+    width: 550px;
+    height: 500px;
+}
+
+button{
+    background-color: hsl(30, 25%, 89%);
+    color: hsl(221, 14%, 31%);
+    border-radius: 15px;
+    font-weight: 700;
+    box-shadow: 0 5px 0 hsl(28, 16%, 65%);
+    font-size: 42px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+button:active{
+    background-color: rgb(255, 255, 255);
+}
+
+#btn7{
+    grid-area: b7;
+}
+#btn8{
+    grid-area: b8;
+}
+#btn9{
+    grid-area: b9;
+}
+#btn_del{
+    grid-area: b_del;
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0 5px 0 hsl(224, 28%, 35%);
+    font-size: 28px;
+    color: #fff;
+}
+#btn_del:active{
+    background-color: hsl(225, 34%, 63%);
+}
+#btn4{
+    grid-area: b4;
+}
+#btn5{
+    grid-area: b5;
+}
+#btn6{
+    grid-area: b6;
+}
+#btn_more{
+    grid-area: b_more;
+}
+#btn1{
+    grid-area: b1;
+}
+#btn2{
+    grid-area: b2;
+}
+#btn3{
+    grid-area: b3;
+}
+#btn_minus{
+    grid-area: b_minus;
+}
+#btn_point{
+    grid-area: b_point;
+}
+#btn0{
+    grid-area: b0;
+}
+#btn_bar{
+    grid-area: b_bar;
+}
+#btnx{
+    grid-area: bx;
+}
+#btn_reset{
+    grid-area: b_reset;
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0 5px 0 hsl(224, 28%, 35%);
+    font-size: 28px;
+    color: #fff;
+}
+#btn_reset:active{
+    background-color: hsl(225, 34%, 63%);
+}
+#btn_equal{
+    grid-area: b_equal;
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0 5px 0 hsl(6, 70%, 34%);
+    font-size: 28px;
+    color: #fff;
+}
+#btn_equal:active{
+    background-color: hsl(6, 97%, 61%);
+}
