@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #fff;
+}
+
+header{
+    background-color: #fff;
+}
+header img{
+    display: block;
+    padding: 30px;
+    margin: auto;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: #B91817;
+    padding: 20px;
+}
+
+a{
+    padding: 0 30px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+a:hover{
+    transform: scale(1.2);
+    transition-duration: .3s;
+}
+
+main{
+    min-width: 400px;
+    max-width: 70%;
+    padding: 50px 0;
+    margin: auto;
+    /* background-image: url(image/41451-c718b99976cce55e8916112760839715-1024-1024.jpg);
+    background-size: cover; */
+    background: #c5c5c5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1{
+    text-align: center;
+    margin: 50px 0 20px 0;
+    padding: 10px;
+}
+
+#piso{
+    margin: auto;
+    width: 320px;
+    height: 530px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+#piso img{
+    width: 100%;
+    height: 100%;
+}
+
+#cozinha{
+    margin: auto;
+    width: 320px;
+    height: 530px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+#cozinha img{
+    width: 100%;
+    height: 100%;
+}
+
+#tinta{
+    margin: auto;
+    width: 320px;
+    height: 530px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+#tinta img{
+    width: 100%;
+    height: 100%;
+}
+
+#banheiro{
+    margin: auto;
+    width: 320px;
+    height: 530px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+#banheiro img{
+    width: 100%;
+    height: 100%;
+}
+
+#ferramenta{
+    margin: auto;
+    width: 320px;
+    height: 530px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+#ferramenta img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 630px) {
+    nav{
+        padding: 20px 15px;
+    }
+    nav a{
+        padding: 0 15px;
+        font-size: 15px;
+    }
+}
