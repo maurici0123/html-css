@@ -26,12 +26,12 @@ body{
 
 main{
     width: 550px;
+    transition-duration: 0.5s;
 }
 
 #header{
     width: 100%;
     height: 60px;
-    font-size: 20px;
     color: #fff;
 }
 #header_number{
@@ -74,15 +74,14 @@ input::-webkit-slider-thumb{
     background-color: hsl(6, 63%, 50%);
 }
 input::-webkit-slider-thumb:active{
-    background-color: hsl(5, 96%, 68%)
-    ;
+    background-color: hsl(5, 96%, 68%);
 }
 
 .screen{
     display: grid;
     justify-content: end;
     align-items: center;
-    width: 550px;
+    width: 100%;
     height: 120px;
     margin: 30px 0px 25px 0px;
     border-radius: 15px;
@@ -113,12 +112,12 @@ input::-webkit-slider-thumb:active{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
     grid-template-areas: "b7 b8 b9 b_del"
-                         "b4 b5 b6 b_more"
+                         "b4 b5 b6 b_plus"
                          "b1 b2 b3 b_minus"
-                         "b_point b0 b_bar bx"
+                         "b_dot b0 b_bar bx"
                          "b_reset b_reset b_equal b_equal";
     gap: 30px 25px;
-    width: 550px;
+    width: 100%;
     height: 500px;
 }
 
@@ -160,8 +159,8 @@ button{
 #btn6{
     grid-area: b6;
 }
-#btn_more{
-    grid-area: b_more;
+#btn_plus{
+    grid-area: b_plus;
 }
 #btn1{
     grid-area: b1;
@@ -175,8 +174,8 @@ button{
 #btn_minus{
     grid-area: b_minus;
 }
-#btn_point{
-    grid-area: b_point;
+#btn_dot{
+    grid-area: b_dot;
 }
 #btn0{
     grid-area: b0;

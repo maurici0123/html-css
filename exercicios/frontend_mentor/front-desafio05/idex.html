@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mq.css">
   <title>Frontend Mentor | Calculator app</title>
 </head>
 <body>
@@ -28,15 +29,34 @@
     </div>
 
     <div class="container">
-      <button class="number" value="7" id="btn7">7</button> <button class="number" value="8" id="btn8">8</button> <button class="number" value="9" id="btn9">9</button> <button id="btn_del">DEL</button>
-      <button class="number" value="4" id="btn4">4</button> <button class="number" value="5" id="btn5">5</button> <button class="number" value="6" id="btn6">6</button>  <button class="number" id="btn_more">+</button>
-      <button class="number" value="1" id="btn1">1</button> <button class="number" value="2" id="btn2">2</button> <button class="number" value="3" id="btn3">3</button> <button class="number" id="btn_minus">-</button>
-      <button class="number" id="btn_point">.</button> <button class="number" value="0" id="btn0">0</button> <button class="number" id="btn_bar">/</button> <button class="number" id="btnx">X</button>
-      <button id="btn_reset">RESET</button> <button id="btn_equal">=</button>
+      <button class="number" value="7" name="btn7" id="btn7" onclick="calc(btn7.value)">7</button>
+      <button class="number" value="8" name="btn8" id="btn8" onclick="calc(btn8.value)">8</button>
+      <button class="number" value="9" name="btn9" id="btn9" onclick="calc(btn9.value)">9</button>
+      <button name="btn_del" id="btn_del" onclick="delet()">DEL</button>
+
+      <button class="number" value="4" name="btn4" id="btn4" onclick="calc(btn4.value)">4</button>
+      <button class="number" value="5" name="btn5" id="btn5" onclick="calc(btn5.value)">5</button>
+      <button class="number" value="6" name="btn6" id="btn6" onclick="calc(btn6.value)">6</button>
+      <button class="number" value="+" name="btn_plus" id="btn_plus" onclick="calc(btn_plus.value)">+</button>
+
+      <button class="number" value="1" name="btn1" id="btn1" onclick="calc(btn1.value)">1</button>
+      <button class="number" value="2" name="btn2" id="btn2" onclick="calc(btn2.value)">2</button>
+      <button class="number" value="3" name="btn3" id="btn3" onclick="calc(btn3.value)">3</button>
+      <button class="number" value="-" name="btn_minus" id="btn_minus" onclick="calc(btn_minus.value)">-</button>
+
+      <button class="number" value="." name="btn_dot" id="btn_dot" onclick="calc(btn_dot.value)">.</button>
+      <button class="number" value="0" name="btn0" id="btn0" onclick="calc(btn0.value)">0</button>
+      <button class="number" value="/" name="btn_bar" id="btn_bar" onclick="calc(btn_bar.value)">/</button>
+      <button class="number" value="*" name="btnx" id="btnx" onclick="calc(btnx.value)">X</button>
+
+      <button name="btn_reset" id="btn_reset" onclick="location.reload()">RESET</button>
+      <button value="=" name="btn_equal" id="btn_equal" onclick="final()">=</button>
+
     </div>
 
   </main>
 
   <script src="script.js"></script>
+  <script src="script-style.js"></script>
 </body>
 </html>
