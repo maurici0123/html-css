@@ -41,30 +41,38 @@ a:hover{
 }
 
 main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    min-width: 400px;
-    max-width: 90%;
-    padding: 50px 0;
+    width: 95%;
     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #fff;
+    border-radius: 10px;
 }
-h1{
-    text-align: center;
-    height: 40px;
-    color: #B91817;
-    text-shadow: 2px 2px 10px #bbb;
-}
-main div{
+
+main img{
     width: 300px;
-    height: 450px;
-    margin: 10px 30px;
-    overflow: hidden;
-}
-div img{
-    width: 100%;
-    height: calc(100% - 40px);
+    height: 400px;
+    margin: 30px auto;
     border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.250);
+}
+
+@media screen and (max-width: 1540px) and (min-width: 1130px){
+    main{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1130px) and (min-width: 720px){
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 720px){
+    main{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media screen and (max-width: 630px) {
