@@ -44,7 +44,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    min-width: 400px;
+    min-width: 300px;
     max-width: 90%;
     padding: 50px 0;
     margin: auto;
@@ -67,12 +67,28 @@ div img{
     border-radius: 20px;
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 630px) and (min-width: 450px) {
     nav{
         padding: 20px 15px;
     }
     nav a{
         padding: 0 15px;
         font-size: 15px;
+    }
+}
+@media screen and (max-width: 450px) {
+    header img{
+        padding: 30px 10px;
+        width: 300px;
+    }
+    nav{
+        padding: 15px 10px;
+    }
+    nav a{
+        padding: 0 8px;
+        font-size: 13px;
+    }
+    main div {
+        margin: 10px 10px;
     }
 }
