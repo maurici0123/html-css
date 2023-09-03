@@ -26,37 +26,37 @@
         <div class="form">
 
             <h3>confira o clima de uma cidade</h3>
-            <div class="form-input">
+            <div class="form-input-container">
                 <input type="text" placeholder="digite o nome da cidade" id="city-input">
-                <button class="search">
+                <button id="search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
 
         </div>
 
-        <div class="weather-data">
+        <div id="weather-data" class="hide">
 
             <h2><i class="fa-solid fa-location-dot"></i>
-                <span class="city">maceio</span>
+                <span id="city"></span>
                 <img src="" alt="bandeira do país" id="country">
             </h2>
-            <p id="temperature"><span>38</span>&deg;C</p>
+            <p id="temperature"><span></span>&deg;C</p>
 
             <div id="description-container">
-                <p id="description">nublado</p>
+                <p id="description"></p>
                 <img src="" alt="condição do tempo" id="weather-icon">
             </div>
-            
+
             <div id="details-container">
-                <p id="umidity">
+                <p id="humidity">
                     <i class="fa-solid fa-droplet"></i>
-                    <span>48%</span>
+                    <span></span>
                 </p>
 
                 <p id="wind">
                     <i class="fa-solid fa-wind"></i>
-                    <span>3km/h</span>
+                    <span></span>
                 </p>
             </div>
         </div>
