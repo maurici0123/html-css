@@ -50,6 +50,9 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
+.form button:hover{
+    background: #a1deff;
+}
 
 #weather-data {
     border-top: 1px solid #fff;
@@ -98,6 +101,31 @@ body {
     border-right: 1px solid #fff;
     margin: 0.6rem;
     padding: 0.6rem;
+}
+
+#citys{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 30px;
+    margin-top: 2rem;
+}
+#citys button{
+    background: #8dd0f5;
+    color: #fdfdfd;
+    border: none;
+    padding: 8px;
+    border-radius: 0.6rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px #594cee;
+    cursor: pointer;
+}
+#citys button:hover{
+    background: #a1deff;
+}
+
+#message-of-error{
+    margin-top: 2rem;
 }
 
 @media screen and (max-width: 350px) {

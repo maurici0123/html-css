@@ -11,14 +11,14 @@ const weathericonelement = document.getElementById('weather-icon')
 const countryelement = document.querySelector('#country')
 const humidityelement = document.querySelector('#humidity span')
 const windelement = document.querySelector('#wind span')
+const messageelement = document.getElementById('message-of-error')
+const cityselement = document.querySelector('#citys')
 
 const weathercontainer = document.getElementById('weather-data')
 
 const getweatherdata = async (city) => {
     const urlweather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}&lang=pt_br`
-
-    const res = await fetch(urlweather)
-    const data = await res.json()
+    const data = fetch(urlweather).then(res => res.json())
 
     return data
 }
@@ -27,7 +27,6 @@ const weatherdata = async (city) => {
     const data = await getweatherdata(city)
 
     if (data.cod == 200) {
-
         cityelement.innerText = data.name
         tempelement.innerText = parseInt(data.main.temp)
         descelement.innerText = data.weather[0].description
@@ -37,8 +36,10 @@ const weatherdata = async (city) => {
         windelement.innerText = `${data.wind.speed}km/h`
 
         weathercontainer.classList.remove('hide')
-    }else {
-        console.log('esté cidade não foi encontrada')
+        messageelement.classList.add('hide')
+    } else {
+        weathercontainer.classList.add('hide')
+        messageelement.classList.remove('hide')
     }
 }
 
@@ -56,3 +57,8 @@ cityinput.addEventListener('keyup', (e) => {
         weatherdata(city)
     }
 })
+
+const recommendation = city => {
+    cityselement.style.display = 'none'
+    weatherdata(city)
+}
