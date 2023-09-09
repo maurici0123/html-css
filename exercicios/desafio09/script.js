@@ -1,5 +1,6 @@
 const key = 'e19136809fdaf25296e951f9f772d11e'
 const urlcountry = 'https://flagcdn.com/h20/'
+const urlbackground = 'https://source.unsplash.com/1600x900/?'
 
 const cityinput = document.getElementById('city-input')
 const searchbtn = document.getElementById('search')
@@ -34,10 +35,16 @@ const weatherdata = async (city) => {
         countryelement.setAttribute("src", `https://flagsapi.com/${data.sys.country}/flat/24.png`)
         humidityelement.innerText = `${data.main.humidity}%`
         windelement.innerText = `${data.wind.speed}km/h`
-
+        
+        cityselement.style.display = 'none'
         weathercontainer.classList.remove('hide')
         messageelement.classList.add('hide')
+
+        const urlbackgroundready = data.name.split(' ')
+        document.body.style.backgroundImage = `url(${urlbackground}+${urlbackgroundready.join('%20')})`
+        document.body.style.backgroundSize = 'cover'
     } else {
+        cityselement.style.display = 'none'
         weathercontainer.classList.add('hide')
         messageelement.classList.remove('hide')
     }
