@@ -10,14 +10,11 @@ function delet() {
 }
 
 function calc(n1) {
-    if (r == 0) {
-        last = resul.length
 
-        console.log()
-        console.log(n1)
-        // if (resul[last]!=n1) {
-        //     console.log('ola')
-        // } else
+    if (r == 0) {
+
+        verification(n1)
+        
         if (n1 == '*') {
             number.innerHTML += 'X'
         } else {
@@ -26,8 +23,13 @@ function calc(n1) {
         resul += n1
 
     } else if (r == 1) {
+
         if (n1 == operator[0].value || n1 == operator[1].value || n1 == operator[2].value || n1 == operator[3].value) {
-            number.innerHTML += n1
+            if (n1 == '*') {
+                number.innerHTML += 'X'
+            } else {
+                number.innerHTML += n1
+            }
             resul += n1
         } else {
             if (n1 == '*') {
@@ -42,7 +44,7 @@ function calc(n1) {
     }
 }
 
-function final() {
+function final_result() {
     resul = eval(resul)
     number.innerHTML = eval(resul)
     r = 1
@@ -56,4 +58,18 @@ function final() {
 function reset() {
     number.innerHTML = ''
     resul = ''
+}
+
+function verification(n1){
+    last = resul.length
+    
+    if (n1 == '*' && resul[last - 1] == '*'){
+        delet()
+    } else if (n1 == '+' && resul[last - 1] == '+'){
+        delet()
+    } else if (n1 == '-' && resul[last - 1] == '-'){
+        delet()
+    } else if (n1 == '/' && resul[last - 1] == '/'){
+        delet()
+    }
 }
