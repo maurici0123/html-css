@@ -19,7 +19,7 @@ table{
     font-weight: bold;
     color: #eeeeee;
 }
-td, th{
+td{
     border: 1px solid black;
     font-size: 22px;
     padding: 0.8em;
@@ -40,4 +40,14 @@ td, th{
 }
 .sex{
     background-color:  #80cee1;
+}
+
+@media screen and (max-width: 970px) {
+    table{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    td{
+    padding: 0.3em;
+    }
 }
