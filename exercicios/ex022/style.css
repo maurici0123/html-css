@@ -1,0 +1,43 @@
+body{
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #5DFDCB 0%,  #90D7FF 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+caption{
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+table{
+    border-collapse: collapse;
+    margin: 10px;
+    background-color: #cca9dd;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    color: #eeeeee;
+}
+td, th{
+    border: 1px solid black;
+    font-size: 22px;
+    padding: 0.8em;
+    text-align: center;
+}
+
+.seg{
+    background-color:  #ff6961;
+}
+.ter{
+    background-color:  #f67828;
+}
+.qua{
+    background-color:  #fdfd96;
+}
+.qui{
+    background-color:   #c6e5b1;
+}
+.sex{
+    background-color:  #80cee1;
+}
