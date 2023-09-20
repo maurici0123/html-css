@@ -13,7 +13,7 @@ caption{
 }
 table{
     border-collapse: collapse;
-    margin: 10px;
+    margin: 50px 10px;
     background-color: #cca9dd;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
     font-weight: bold;
@@ -42,12 +42,26 @@ td{
     background-color:  #80cee1;
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 970px) and (min-width: 815) {
     table{
         font-size: 16px;
         font-weight: 500;
     }
     td{
     padding: 0.3em;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    body{
+        height: auto;
+    }
+    table{
+        font-size: 12px;
+        font-weight: 400;
+        width: 90%;
+    }
+    td{
+    padding: 0.2em;
     }
 }
