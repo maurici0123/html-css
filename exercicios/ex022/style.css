@@ -1,4 +1,5 @@
 body{
+    margin: 0;
     height: 100vh;
     background-image: linear-gradient(to bottom, #5DFDCB 0%,  #90D7FF 100%);
     display: flex;
@@ -15,9 +16,9 @@ table{
     border-collapse: collapse;
     margin: 50px 10px;
     background-color: #cca9dd;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-weight: bold;
-    color: #eeeeee;
+    color: #ffffff;
 }
 td{
     border: 1px solid black;
@@ -33,7 +34,7 @@ td{
     background-color:  #f67828;
 }
 .qua{
-    background-color:  #fdfd96;
+    background-color:  #fafa85;
 }
 .qui{
     background-color:   #c6e5b1;
@@ -53,15 +54,13 @@ td{
 }
 
 @media screen and (max-width: 815px) {
-    body{
-        height: auto;
-    }
     table{
         font-size: 12px;
         font-weight: 400;
         width: 90%;
     }
     td{
-    padding: 0.2em;
+    padding: 0.1em;
+    font-size: 18px;
     }
 }
