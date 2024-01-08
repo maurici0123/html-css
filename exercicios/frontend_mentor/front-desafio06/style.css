@@ -45,10 +45,12 @@ body{
     height: 70px;
     border-radius: 50%;
     cursor: pointer;
+    transition: .5s;
 }
 
 #dado:hover{
     box-shadow: 0 0 30px hsl(150, 100%, 66%);
+    transform:rotate(45deg);
 }
 
 #desktop{

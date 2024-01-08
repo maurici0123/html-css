@@ -1,12 +1,17 @@
 const numberelement = document.querySelector('#number_advice')
 const adviceelement = document.querySelector('#advice')
 
-const url = "https://api.adviceslip.com/advice"
-const x = fetch(url).then(res => res.json()).then(function advice(res){
-    console.log(res)
+const urlAdvice = "https://api.adviceslip.com/advice"
 
+fetch(urlAdvice).then(res => res.json()).then(function id(res){
     numberelement.innerHTML = `ADVICE #${res.slip.id}`
-    adviceelement.innerHTML = `"${res.slip.advice}"`
+    const advice = res.slip.advice
+    
+
+    const urlTranslate = `https://api.mymemory.translated.net/get?q=${advice}&langpair=en|pt-br`
+    fetch(urlTranslate).then(res => res.json()).then(function advice (res){
+        adviceelement.innerHTML = `"${res.responseData.translatedText}"`
+    })
 })
 
 function reload(){
