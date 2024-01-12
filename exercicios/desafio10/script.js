@@ -40,11 +40,13 @@ function show_buttons(array) {
 }
 
 document.getElementById('start').addEventListener('click', function(){
-    
+
     gabarito=[]
     vet=[]
+    index=0
+
     document.getElementById('score_number').innerHTML = 0
-    
+
     gabarito.push(parseInt(Math.random() * 4 + 1))
     
     show_buttons(gabarito)
@@ -98,5 +100,4 @@ function add(n){
         console.log('errado')
         document.getElementById('score_number').innerHTML = 0
     }
-    
 }
