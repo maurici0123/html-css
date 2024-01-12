@@ -43,7 +43,7 @@ document.getElementById('start').addEventListener('click', function(){
     
     gabarito=[]
     vet=[]
-    document.getElementById('count_number').innerHTML = 0
+    document.getElementById('score_number').innerHTML = 0
     
     gabarito.push(parseInt(Math.random() * 4 + 1))
     
@@ -82,7 +82,7 @@ function add(n){
         if (index == gabarito.length){
             index = 0
             count ++
-            document.getElementById('count_number').innerHTML = count
+            document.getElementById('score_number').innerHTML = count
             
             c = parseInt(Math.random() * 4) + 1
             vet=[]
@@ -96,7 +96,7 @@ function add(n){
         }
     }else{
         console.log('errado')
-        document.getElementById('count_number').innerHTML = 0
+        document.getElementById('score_number').innerHTML = 0
     }
     
 }
