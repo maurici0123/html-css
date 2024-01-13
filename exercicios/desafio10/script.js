@@ -8,6 +8,8 @@ vet=[]
 gabarito=[]
 index=0
 count=0
+document.getElementById('record_number').innerHTML = Number(localStorage.getItem('record'))
+
 
 function show_buttons(array) {
     indice = 0;
@@ -33,7 +35,7 @@ function show_buttons(array) {
             }
 
             indice++
-            setTimeout(iteracao, 500)
+            setTimeout(iteracao, 400)
         }
     }
     iteracao()
@@ -44,6 +46,7 @@ document.getElementById('start').addEventListener('click', function(){
     gabarito=[]
     vet=[]
     index=0
+    count=0
 
     document.getElementById('score_number').innerHTML = 0
 
@@ -85,6 +88,11 @@ function add(n){
             index = 0
             count ++
             document.getElementById('score_number').innerHTML = count
+
+            if (count > Number(localStorage.getItem('record'))){
+                localStorage.setItem('record', count)
+                document.getElementById('record_number').innerHTML = Number(localStorage.getItem('record'))
+            }
             
             c = parseInt(Math.random() * 4) + 1
             vet=[]
