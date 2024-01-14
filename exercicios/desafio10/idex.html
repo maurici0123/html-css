@@ -7,22 +7,19 @@
     <title>game</title>
 </head>
 <body>
-    <div class="menu">
-        <div id="record">
-            <p>record</p>
-            <div id="record_number"></div>
-        </div>
-        
-        <button id="start" type="button">start</button>
-        
-        <div id="score">
-            <p>score</p>
-            <div id="score_number">0</div>
-        </div>
-    </div>
-    
 
     <div class="container">
+        <div id="test">
+                <div id="record">
+                    <p>record</p>
+                    <div id="record_number">0</div>
+                </div>
+                <button id="start" type="button"><span>start</span></button>
+                <div id="score">
+                    <p>score</p>
+                    <div id="score_number">0</div>
+                </div>
+        </div>
         <button class="buttons" id="left-top" value="1" onmousedown="add(value)"></button>
         <button class="buttons" id="right-top" value="2" onmousedown="add(value)"></button>
         <button class="buttons" id="left-bottom" value="4" onmousedown="add(value)"></button>
@@ -30,5 +27,6 @@
     </div>
     
     <script src="script.js"></script>
+
 </body>
 </html>
