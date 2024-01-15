@@ -1,3 +1,3 @@
-function fun(){
-    console.log('ola')
-}
+x = document.getElementById('ola')
+
+x.addEventListener('touchstart', () => console.log('ola'))
