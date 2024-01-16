@@ -8,6 +8,9 @@
         <li><a href="https://maurici0123.github.io/html-css/exercicios/desafio05/idex" style="text-decoration: none;">desafio 05</a></li>
         <li><a href="https://maurici0123.github.io/html-css/exercicios/desafio06/idex" style="text-decoration: none;">desafio 06</a></li>
         <li><a href="https://maurici0123.github.io/html-css/exercicios/desafio07/idex" style="text-decoration: none;">desafio 07</a></li>
+        <li><a href="https://maurici0123.github.io/html-css/exercicios/desafio08/idex" style="text-decoration: none;">desafio 08</a></li>
+        <li><a href="https://maurici0123.github.io/html-css/exercicios/desafio09/idex" style="text-decoration: none;">desafio 09</a></li>
+        <li><a href="https://maurici0123.github.io/html-css/exercicios/desafio10/idex" style="text-decoration: none;">desafio 10</a></li>
         <li><a href="https://maurici0123.github.io/html-css/exercicios/ex001/idex.html" style="text-decoration: none;">exercicio 01</a></li>
         <li><a href="https://maurici0123.github.io/html-css/exercicios/ex002/idex.html" style="text-decoration: none;">exercicio 02</a></li>
         <li><a href="https://maurici0123.github.io/html-css/exercicios/ex003/idex.html" style="text-decoration: none;">exercicio 03</a></li>
@@ -34,4 +37,5 @@
         <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio03/idex.html" style="text-decoration: none;">front-desafio 03</a></li>
         <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio04/idex.html" style="text-decoration: none;">front-desafio 04</a></li>
         <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio05/idex.html" style="text-decoration: none;">front-desafio 05</a></li>
+        <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio06/idex.html" style="text-decoration: none;">front-desafio 06</a></li>
     </ul>

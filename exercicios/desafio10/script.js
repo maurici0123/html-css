@@ -123,6 +123,8 @@ function add(n){
     }
 }
 
+
+// mostrar as luzes dos botões no mobile
 btn_g.addEventListener('touchstart', () => {btn_g.style.backgroundColor = '#00ff00', btn_g.style.boxShadow =  '0 0 75px 10px #00ff00'})
 btn_r.addEventListener('touchstart', () => {btn_r.style.backgroundColor = '#ff0000', btn_r.style.boxShadow =  '0 0 75px 10px #ff0000'})
 btn_b.addEventListener('touchstart', () => {btn_b.style.backgroundColor = '#0000ff', btn_b.style.boxShadow =  '0 0 75px 10px #0000ff'})
