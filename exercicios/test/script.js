@@ -1,3 +1,2 @@
-x = document.getElementById('ola')
-
-x.addEventListener('touchstart', () => console.log('ola'))
+x = document.querySelectorAll('p')
+console.log(x[2])

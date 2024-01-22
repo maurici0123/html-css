@@ -108,12 +108,13 @@ p{
 @media screen and (max-width: 770px) {
 
     .container {
-        height: 547px;
-        width: 547px;
+        height: 531px;
+        width: 531px;
     }
     .buttons{
         height: 250px;
         width: 250px;
+        margin: 7px;
     }
     #left-top{   
         border-radius: 250px 0 0 0;
@@ -148,12 +149,13 @@ p{
 @media screen and (max-width: 560px) {
 
     .container {
-        height: 343px;
-        width: 343px;
+        height: 319px;
+        width: 319px;
     }
     .buttons{
         height: 150px;
         width: 150px;
+        margin: 4px;
     }
     #left-top{   
         border-radius: 150px 0 0 0;
