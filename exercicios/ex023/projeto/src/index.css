@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#banner{
+    background-image: url(img/banner-hotel.jpg);
+}
+
+#featured{
+    background-image: url(img/carrossel-1.jpg);
+}
+
+#grid-1{
+    background-image: url(img/grid-1.jpg);
+}
+
+#grid-2{
+    background-image: url(img/grid-2.jpg);
+}
+
+#grid-3{
+    background-image: url(img/grid-3.jpg);
+}
+
+#grid-4{
+    background-image: url(img/grid-4.jpg);
+}
