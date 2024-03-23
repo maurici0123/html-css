@@ -18,28 +18,32 @@ function show_buttons(array) {
       
     function iteracao() {
         if (indice < array.length) {
-        
+
             if (array[indice] == 1){
                 btn_g.style.backgroundColor = '#00ff00'
                 btn_g.style.boxShadow =  '0 0 75px 10px #00ff00'
+                audio[0].load()
                 audio[0].play()
                 setTimeout(() => {btn_g.style.backgroundColor = '#199119', btn_g.style.boxShadow = 'none'}, 200)
             }
             else if (array[indice] == 2){
                 btn_r.style.backgroundColor = '#ff0000'
                 btn_r.style.boxShadow =  '0 0 75px 10px #ff0000'
+                audio[1].load()
                 audio[1].play()
                 setTimeout(() => {btn_r.style.backgroundColor = '#a31616', btn_r.style.boxShadow = 'none'}, 200)
             }
             else if (array[indice] == 3){
                 btn_b.style.backgroundColor = '#0000ff'
                 btn_b.style.boxShadow =  '0 0 75px 10px #0000ff'
+                audio[2].load()
                 audio[2].play()
                 setTimeout(() => {btn_b.style.backgroundColor = '#00008b', btn_b.style.boxShadow = 'none'}, 200)
             }
             else if (array[indice] == 4){
                 btn_y.style.backgroundColor = '#ffff00'
                 btn_y.style.boxShadow =  '0 0 75px 10px #ffff00'
+                audio[3].load()
                 audio[3].play()
                 setTimeout(() => {btn_y.style.backgroundColor = '#bdbd0e', btn_y.style.boxShadow = 'none'}, 200)
             }
@@ -75,6 +79,7 @@ function add(n){
     if (n == 1){
         btn_g.style.backgroundColor = '#00ff00'
         btn_g.style.boxShadow =  '0 0 75px 10px #00ff00'
+        audio[0].load()
         audio[0].play()
         btn_g.addEventListener('mouseup', () => {btn_g.style.backgroundColor = '#199119', btn_g.style.boxShadow = 'none'})
         btn_g.addEventListener('mouseout', () => {btn_g.style.backgroundColor = '#199119', btn_g.style.boxShadow = 'none'})
@@ -82,6 +87,7 @@ function add(n){
     else if (n == 2){
         btn_r.style.backgroundColor = '#ff0000'
         btn_r.style.boxShadow =  '0 0 75px 10px #ff0000'
+        audio[1].load()
         audio[1].play()
         btn_r.addEventListener('mouseup', () => {btn_r.style.backgroundColor = '#a31616', btn_r.style.boxShadow = 'none'})
         btn_r.addEventListener('mouseout', () => {btn_r.style.backgroundColor = '#a31616', btn_r.style.boxShadow = 'none'})
@@ -89,6 +95,7 @@ function add(n){
     else if (n == 3){
         btn_b.style.backgroundColor = '#0000ff'
         btn_b.style.boxShadow =  '0 0 75px 10px #0000ff'
+        audio[2].load()
         audio[2].play()
         btn_b.addEventListener('mouseup', () => {btn_b.style.backgroundColor = '#00008b', btn_b.style.boxShadow = 'none'})
         btn_b.addEventListener('mouseout', () => {btn_b.style.backgroundColor = '#00008b', btn_b.style.boxShadow = 'none'})
@@ -96,6 +103,7 @@ function add(n){
     else if (n == 4){
         btn_y.style.backgroundColor = '#ffff00'
         btn_y.style.boxShadow =  '0 0 75px 10px #ffff00'
+        audio[3].load()
         audio[3].play()
         btn_y.addEventListener('mouseup', () => {btn_y.style.backgroundColor = '#bdbd0e', btn_y.style.boxShadow = 'none'})
         btn_y.addEventListener('mouseout', () => {btn_y.style.backgroundColor = '#bdbd0e', btn_y.style.boxShadow = 'none'})
