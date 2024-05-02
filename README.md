@@ -36,6 +36,6 @@
         <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio02/idex.html" style="text-decoration: none;">front-desafio 02</a></li>
         <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio03/idex.html" style="text-decoration: none;">front-desafio 03</a></li>
         <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio04/idex.html" style="text-decoration: none;">front-desafio 04</a></li>
-        <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio05/idex.html" style="text-decoration: none;">front-desafio 05</a></li>
+        <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio05/index.html" style="text-decoration: none;">front-desafio 05</a></li>
         <li><a href="https://maurici0123.github.io/html-css/exercicios/frontend_mentor/front-desafio06/idex.html" style="text-decoration: none;">front-desafio 06</a></li>
     </ul>
