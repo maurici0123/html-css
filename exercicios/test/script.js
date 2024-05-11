@@ -1,3 +1,4 @@
+const invalid = document.getElementById('invalid')
 const number = document.getElementById('number')
 const operator = document.getElementsByClassName('operator')
 resul = '' // Inicializa a variável 'resul' para armazenar a expressão aritmética que está sendo construída
@@ -109,6 +110,7 @@ function final_result() {
     r = 1 // Sinaliza que o botão '=' foi pressionado
 
     // Lida com o caso de resultado indefinido (ex: divisão por zero)
+    //! arrumar essa menssagem de erro usando o try
     if (typeof (resul) == 'undefined') {
         resul = ''
         number.innerHTML = ''
@@ -151,16 +153,16 @@ function initial_operator_check(n1) {
 
 // Função para lidar com a entrada dos números e operadores e construir a expressão aritmética
 function calc(n1) {
-    
+
     if (r == 0) {
-        
+
         verification(n1)
 
         if (resul.length == 0) {
 
             initial_operator_check(n1)
         } else {
-            
+
             if (n1 == '*') {
                 number.innerHTML += 'X'
             } else {
@@ -169,7 +171,7 @@ function calc(n1) {
             resul += n1
         }
     } else if (r == 1) {
-        
+
         if (n1 == operator[0].value || n1 == operator[1].value || n1 == operator[2].value || n1 == operator[3].value) {
             if (n1 == '*') {
                 number.innerHTML += 'X'
@@ -178,7 +180,7 @@ function calc(n1) {
             }
             resul += n1
         } else {
-            
+
             if (n1 == '*') {
                 number.innerHTML = 'X'
             } else {

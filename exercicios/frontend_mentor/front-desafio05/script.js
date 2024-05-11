@@ -1,3 +1,4 @@
+const invalid = document.getElementById('invalid')
 const number = document.getElementById('number')
 const operator = document.getElementsByClassName('operator')
 resul = '' // Inicializa a variável 'resul' para armazenar a expressão aritmética que está sendo construída
@@ -69,9 +70,10 @@ function Expand() {
         container.style.gridTemplateAreas = "'b7 b8 b9 b_del' 'b4 b5 b6 b_plus' 'b1 b2 b3 b_minus' 'b_dot b0 b_bar bx' 'b_advanced b_reset b_equal b_equal'"
 
         // Oculta os botões avançados
-        for (c in btn_advanced) {
-            btn_advanced[c].style.display = 'none'
-        }
+        btn_advanced.forEach((btn) => {
+            btn.style.display = 'none';
+        })
+
     } else if (expand.getAttribute('dis') == 'none') {
         expand.setAttribute('dis', 'block')
         expand.innerHTML = none
@@ -89,14 +91,17 @@ function Expand() {
         }
 
         // Exibe os botões avançados
-        for (c in btn_advanced) {
-            btn_advanced[c].style.display = 'block'
-        }
+        btn_advanced.forEach((btn) => {
+            btn.style.display = 'block';
+        })
     }
 }
 
 // Função para apagar o último caractere da expressão aritmética
 function delet() {
+    // apagar a menssagem de 'operação invãlido'
+    invalid.innerHTML = ''
+
     resul = String(resul)
     resul = resul.slice(0, -1)
     number.innerHTML = resul.replace(/\*/g, 'X') // Substitui '*' por 'X' na exibição
@@ -104,21 +109,21 @@ function delet() {
 
 // Função para calcular o resultado final da expressão
 function final_result() {
-    resul = eval(resul)
-    number.innerHTML = eval(resul)
-    r = 1 // Sinaliza que o botão '=' foi pressionado
-
-    // Lida com o caso de resultado indefinido (ex: divisão por zero)
-    //! arrumar essa menssagem de erro usando o try
-    if (typeof (resul) == 'undefined') {
-        resul = ''
-        number.innerHTML = ''
-        alert('Operação inválida!')
+    try {
+        resul = eval(resul)
+        number.innerHTML = eval(resul)
+        r = 1 // Sinaliza que o botão '=' foi pressionado
+    } catch (err) {
+        // mostra a menssagem de 'operação invãlido'
+        invalid.innerHTML = 'operação inválida!'
     }
 }
 
 // Função para reiniciar a calculadora
 function reset() {
+    // apagar a menssagem de 'operação invãlido'
+    invalid.innerHTML = ''
+
     number.innerHTML = ''
     resul = ''
 }
@@ -152,6 +157,8 @@ function initial_operator_check(n1) {
 
 // Função para lidar com a entrada dos números e operadores e construir a expressão aritmética
 function calc(n1) {
+    // apagar a menssagem de 'operação invãlido'
+    invalid.innerHTML = ''
 
     if (r == 0) {
 
