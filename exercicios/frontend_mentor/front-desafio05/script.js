@@ -1,7 +1,7 @@
 const invalid = document.getElementById('invalid')
 const number = document.getElementById('number')
 const operator = document.getElementsByClassName('operator')
-resul = '' // Inicializa a variável 'resul' para armazenar a expressão aritmética que está sendo construída
+resul = `` // Inicializa a variável 'resul' para armazenar a expressão aritmética que está sendo construída
 r = 0 // Inicializa a variável 'r' para controlar se o último botão pressionado foi o botão '=' (resultado)
 
 const expand = document.querySelector('#expand')
@@ -97,14 +97,25 @@ function Expand() {
     }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function square_root(n1) {
+    sqrt = resul.split('')
+    sqrt.splice(sqrt.length - 1, 0, n1)
+    resul = sqrt.join('')
+
+    console.log(resul)
+    insert(n1, false)
+}
+
 // Função para apagar o último caractere da expressão aritmética
 function delet() {
     // apagar a menssagem de 'operação invãlido'
-    invalid.innerHTML = ''
+    invalid.innerHTML = ``
 
     resul = String(resul)
     resul = resul.slice(0, -1)
-    number.innerHTML = resul.replace(/\*/g, 'X') // Substitui '*' por 'X' na exibição
+    number.innerHTML = resul.replace(/\*/g, '<i class="fa-solid fa-xmark"></i>') // Substitui '*' por 'X' na exibição
 }
 
 // Função para calcular o resultado final da expressão
@@ -122,65 +133,67 @@ function final_result() {
 // Função para reiniciar a calculadora
 function reset() {
     // apagar a menssagem de 'operação invãlido'
-    invalid.innerHTML = ''
+    invalid.innerHTML = ``
 
-    number.innerHTML = ''
-    resul = ''
+    number.innerHTML = ``
+    resul = ``
 }
 
 // Função para verificar e evitar operadores duplicados consecutivos
-function verification(n1) {
-    last = resul.length
-    if (n1 == '*' && resul[last - 1] == '*') {
+function operator_verification(n1) {
+    last = resul.length - 1
+    if (n1 == '*' && resul[last] == '*') {
         delet()
-    } else if (n1 == '+' && resul[last - 1] == '+') {
+    } else if (n1 == '+' && resul[last] == '+') {
         delet()
-    } else if (n1 == '-' && resul[last - 1] == '-') {
+    } else if (n1 == '-' && resul[last] == '-') {
         delet()
-    } else if (n1 == '/' && resul[last - 1] == '/') {
+    } else if (n1 == '/' && resul[last] == '/') {
         delet()
     }
+}
+
+// Função para inserir número/operador
+function insert(n1, sqrt=true) {
+    if (n1 == '*') {
+        number.innerHTML += `<i class="fa-solid fa-xmark"></i>`
+    } else if (n1 == 'Math.sqrt()') {
+        number.innerHTML += `√`
+    } else {
+        number.innerHTML += n1
+    }   
+
+    sqrt ? resul += n1 : null
 }
 
 // Função para verificar se o primeiro operador é válido
 function initial_operator_check(n1) {
     // Só aceito o operador de subtração
     if (n1 != '*' && n1 != '+' && n1 != '/') {
-        if (n1 == '*') {
-            number.innerHTML += 'X'
-        } else {
-            number.innerHTML += n1
-        }
-        resul += n1
+        insert(n1)
     }
 }
 
 // Função para lidar com a entrada dos números e operadores e construir a expressão aritmética
 function calc(n1) {
-    // apagar a menssagem de 'operação invãlido'
-    invalid.innerHTML = ''
+    // apagar a menssagem de 'operação inválido'
+    invalid.innerHTML = ``
 
     if (r == 0) {
-
-        verification(n1)
+        operator_verification(n1)
 
         if (resul.length == 0) {
-
             initial_operator_check(n1)
+        } else if (resul.slice(resul.length - 1 - 10, resul.length) == 'Math.sqrt()') {
+            square_root(n1)
         } else {
-
-            if (n1 == '*') {
-                number.innerHTML += 'X'
-            } else {
-                number.innerHTML += n1
-            }
-            resul += n1
+            insert(n1)
         }
     } else if (r == 1) {
 
         if (n1 == operator[0].value || n1 == operator[1].value || n1 == operator[2].value || n1 == operator[3].value) {
             if (n1 == '*') {
-                number.innerHTML += 'X'
+                number.innerHTML += `<i class="fa-solid fa-xmark"></i>`
             } else {
                 number.innerHTML += n1
             }
@@ -188,7 +201,7 @@ function calc(n1) {
         } else {
 
             if (n1 == '*') {
-                number.innerHTML = 'X'
+                number.innerHTML = `<i class="fa-solid fa-xmark"></i>`
             } else {
                 number.innerHTML = n1
             }

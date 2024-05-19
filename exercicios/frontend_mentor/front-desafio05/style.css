@@ -211,6 +211,7 @@ button {
 
 #btn_minus {
     grid-area: b_minus;
+    padding-top: 6px;
 }
 
 #btn_dot {
