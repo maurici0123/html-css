@@ -104,7 +104,6 @@ function square_root(n1) {
     sqrt.splice(sqrt.length - 1, 0, n1)
     resul = sqrt.join('')
 
-    console.log(resul)
     insert(n1, false)
 }
 
@@ -114,7 +113,14 @@ function delet() {
     invalid.innerHTML = ``
 
     resul = String(resul)
-    resul = resul.slice(0, -1)
+    //console.log(typeof(resul))
+    if (resul.slice(resul.length - 11, resul.length) == 'Math.sqrt()') {
+        resul = resul.slice(0, -11)
+    } else if (/Math\.sqrt\(\d+\)$/.test(resul)) {
+        console.log(1)
+    } else {
+        resul = resul.slice(0, -1)
+    }
     number.innerHTML = resul.replace(/\*/g, '<i class="fa-solid fa-xmark"></i>') // Substitui '*' por 'X' na exibição
 }
 
@@ -134,9 +140,9 @@ function final_result() {
 function reset() {
     // apagar a menssagem de 'operação invãlido'
     invalid.innerHTML = ``
-
     number.innerHTML = ``
     resul = ``
+    r = 0
 }
 
 // Função para verificar e evitar operadores duplicados consecutivos
@@ -154,14 +160,14 @@ function operator_verification(n1) {
 }
 
 // Função para inserir número/operador
-function insert(n1, sqrt=true) {
+function insert(n1, sqrt = true) {
     if (n1 == '*') {
         number.innerHTML += `<i class="fa-solid fa-xmark"></i>`
     } else if (n1 == 'Math.sqrt()') {
         number.innerHTML += `√`
     } else {
         number.innerHTML += n1
-    }   
+    }
 
     sqrt ? resul += n1 : null
 }
@@ -184,7 +190,7 @@ function calc(n1) {
 
         if (resul.length == 0) {
             initial_operator_check(n1)
-        } else if (resul.slice(resul.length - 1 - 10, resul.length) == 'Math.sqrt()') {
+        } else if (resul.slice(resul.length - 11, resul.length) == 'Math.sqrt()' || /Math\.sqrt\(\d+\)$/.test(resul)) {
             square_root(n1)
         } else {
             insert(n1)
@@ -194,6 +200,8 @@ function calc(n1) {
         if (n1 == operator[0].value || n1 == operator[1].value || n1 == operator[2].value || n1 == operator[3].value) {
             if (n1 == '*') {
                 number.innerHTML += `<i class="fa-solid fa-xmark"></i>`
+            } else if (n1 == 'Math.sqrt()') {
+                number.innerHTML += `√`
             } else {
                 number.innerHTML += n1
             }
@@ -202,6 +210,8 @@ function calc(n1) {
 
             if (n1 == '*') {
                 number.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+            } else if (n1 == 'Math.sqrt()') {
+                number.innerHTML += `√`
             } else {
                 number.innerHTML = n1
             }
