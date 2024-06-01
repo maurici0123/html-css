@@ -1,0 +1,26 @@
+@media screen and (max-width: 575px) and (min-width: 420px){
+    main{
+        width: 400px;
+    }
+    .container{
+        gap: 35px 20px;
+        height: 470px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    main{
+        width: 320px;
+    }
+    .container{
+        gap: 20px 15px;
+        height: 300px;
+    }
+    button{
+        font-size: 25px;
+        border-radius: 8px;
+    }
+    #btn_reset, #btn_equal, #btn_del{
+        font-size: 20px;
+    }
+}
