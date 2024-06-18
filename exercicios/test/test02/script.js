@@ -1,33 +1,60 @@
-x = `√4+√√81*(2)-2+log10+8`
-x = x.split('')
-te = 1
-to = 1
+input = `√√81*2+log10+sin45+cos45`
+input = input.split('')
+closed_expression = 1
+insert_expression = 1
+arraySymbols = ['√', 'log', 'sin', 'cos', 'tan']
 
 function verification(operator, i, op) {
-    if (x[op] == operator && op > i) {
-        te++
-        x.splice(op, 0, `)`)
+    if (input[op] == operator && op > i) {
+        closed_expression++
+        input.splice(op, 0, `)`)
         return 'stop'
     }
 }
 
+for (i = 0; i < input.length; i++) {
+    if (input[i] == 'l' && input[i + 1] == 'o') {
+        input.splice(i, 1)
+        input.splice(i, 1)
+        input.splice(i, 1)
+        input.splice(i, 0, 'log')
+    }
+    if (input[i] == 's' && input[i + 1] == 'i') {
+        input.splice(i, 1)
+        input.splice(i, 1)
+        input.splice(i, 1)
+        input.splice(i, 0, 'sin')
+    }
+    if (input[i] == 'c' && input[i + 1] == 'o') {
+        input.splice(i, 1)
+        input.splice(i, 1)
+        input.splice(i, 1)
+        input.splice(i, 0, 'cos')
+    }
+    if (input[i] == 't' && input[i + 1] == 'a') {
+        input.splice(i, 1)
+        input.splice(i, 1)
+        input.splice(i, 1)
+        input.splice(i, 0, 'tan')
+    }
+}
+
+
 function conversion(symbol, expression) {
 
-    for (i = 0; i < x.length; i++) {
-        if (x[i] == symbol) {
-            to++
-            if (symbol == '√') {
-                x.splice(i, 1)
-                x.splice(i, 0, expression)
-            } else {
-                console.log(1)
-                x.splice(i, 1)
-                x.splice(i - 1, 1)
-                x.splice(i - 2, 1)
-                x.splice(i - 2, 0, expression)
+    for (i = 0; i < input.length; i++) {
+        if (input[i] == symbol) {
+            if (arraySymbols.includes(symbol)) {
+                input.splice(i, 1)
+                input.splice(i, 0, expression)
+            } else if (symbol == 'π') {
+                input.splice(i, 1)
+                input.splice(i, 0, expression)
+                break
             }
+            insert_expression++
 
-            for (let op = 0; op < x.length; op++) {
+            for (let op = 0; op < input.length; op++) {
                 if (verification('+', i, op) == 'stop') break
                 else if (verification('-', i, op) == 'stop') break
                 else if (verification('*', i, op) == 'stop') break
@@ -38,11 +65,17 @@ function conversion(symbol, expression) {
 }
 
 conversion('√', 'Math.sqrt(')
-conversion('g', 'Math.log10(')
+conversion('π', 'Math.PI')
+conversion('log', 'Math.log10(')
+conversion('sin', 'Math.sin(')
+conversion('cos', 'Math.cos(')
 
-te != to ? x.push(')') : null
+while (insert_expression != closed_expression) {
+    input.push(')')
+    closed_expression++
+}
 
-x = x.join('')
-console.log(x)
+input = input.join('')
+console.log(input)
 
-console.log(eval(x))
+console.log(eval(input))
