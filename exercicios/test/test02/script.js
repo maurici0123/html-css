@@ -1,4 +1,4 @@
-input = `2*cos34log10`
+input = `2*cos34log10(√((20+5)+11))`
 input = input.split('')
 closed_expression = insert_expression = 0
 symbolsArray = ['√', 'log', 'sin', 'cos', 'tan', 'π', '^']
@@ -15,6 +15,19 @@ function verification(operator, op) {
         closed_expression++
         input.splice(op, 0, `)`)
         return true
+    }
+}
+
+function insert_multiplication() {
+    for (let i = 0; i < input.length - 1; i++) {
+        if (input[i] == ')' && input[i + 1] == '(') input.splice(i + 1, 0, '*') // )(
+
+        if (!isNaN(input[i]) && input[i + 1] == '(') input.splice(i + 1, 0, '*') // number(
+        if (input[i] == ')' && !isNaN(input[i + 1])) input.splice(i + 1, 0, '*') // )number
+
+        if (!isNaN(input[i]) && input[i + 1].match(/Math\.\w+/)) input.splice(i + 1, 0, '*') // numberMath
+
+        if (input[i] == ')' && input[i + 1].match(/Math\.\w+/)) input.splice(i + 1, 0, '*') // )Math
     }
 }
 
@@ -39,13 +52,15 @@ function conversion(symbol, expression, no_parentheses = false) {
                         if (verification(expressionArray, op)) break
                         if (verification(symbolsArray, op)) break
                     }
+
+                    insert_multiplication()
                 }
             }
         }
     }
 }
 
-//////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 
 for (i = 0; i < input.length; i++) {
     if (input[i] == 'l' && input[i + 1] == 'o') {
@@ -79,18 +94,7 @@ while (insert_expression != closed_expression) {
     closed_expression++
 }
 
-for (let i = 0; i < input.length - 1; i++) {
-    if (input[i] == ')' && input[i + 1] == '(') input.splice(i + 1, 0, '*')
-
-    if (!isNaN(input[i]) && input[i + 1] == '(') input.splice(i + 1, 0, '*')
-    if (input[i] == ')' && !isNaN(input[i + 1])) input.splice(i + 1, 0, '*')
-
-    if (!isNaN(input[i]) && input[i + 1].match(/Math\.\w+/)) input.splice(i + 1, 0, '*')
-
-    if (input[i] == ')' && input[i + 1].match(/Math\.\w+/)) input.splice(i + 1, 0, '*')
-}
-
 input = input.join('')
 console.log(input)
 
-console.log(eval(input))
+console.log(eval(input))    
