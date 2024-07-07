@@ -1,4 +1,4 @@
-input = `2*cos34log10(√((20+5)+11))`
+input = `2+((2)+2)!`
 input = input.split('')
 closed_expression = insert_expression = 0
 symbolsArray = ['√', 'log', 'sin', 'cos', 'tan', 'π', '^']
@@ -19,16 +19,66 @@ function verification(operator, op) {
 }
 
 function insert_multiplication() {
-    for (let i = 0; i < input.length - 1; i++) {
-        if (input[i] == ')' && input[i + 1] == '(') input.splice(i + 1, 0, '*') // )(
+    for (i = 0; i < input.length - 1; i++) {
+        if (input[i] == ')' && input[i + 1] == '(') input.splice(i + 1, 0, '*') //=>  )==(
 
-        if (!isNaN(input[i]) && input[i + 1] == '(') input.splice(i + 1, 0, '*') // number(
-        if (input[i] == ')' && !isNaN(input[i + 1])) input.splice(i + 1, 0, '*') // )number
+        if (!isNaN(input[i]) && input[i + 1] == '(') input.splice(i + 1, 0, '*') //=>  number==(
+        if (input[i] == ')' && !isNaN(input[i + 1])) input.splice(i + 1, 0, '*') //=>  )==number
+        if (input[i] == 'Math.PI' && !isNaN(input[i + 1])) input.splice(i + 1, 0, '*') //=>  PI==number
 
-        if (!isNaN(input[i]) && input[i + 1].match(/Math\.\w+/)) input.splice(i + 1, 0, '*') // numberMath
-
-        if (input[i] == ')' && input[i + 1].match(/Math\.\w+/)) input.splice(i + 1, 0, '*') // )Math
+        if (!isNaN(input[i]) && input[i + 1].match(/Math\.\w+/)) input.splice(i + 1, 0, '*') //=>  number==Math
+        if (input[i] == ')' && input[i + 1].match(/Math\.\w+/)) input.splice(i + 1, 0, '*') //=>  )==Math
     }
+}
+
+function solve_factorial(n) {
+    if (n === 0) {
+        return 1
+    }
+    return n * solve_factorial(n - 1)
+}
+
+function factorial() {
+    pos2 = pos1 = 0
+    x = false
+
+    for (i = 0; i < input.length - 1; i++) {
+        if (input[i] == '!' && input[i + 1] == '(') input.splice(i + 1, 0, '*') //=>  !==(
+        if (input[i] == '!' && input[i + 1].match(/Math\.\w+/)) input.splice(i + 1, 0, '*') //=>  !==Math
+        if (input[i] == '!' && !isNaN(input[i + 1])) input.splice(i + 1, 0, '*') //=>  !==number
+    }
+
+    for (i = input.length - 1; i >= 0; i--) {
+        if (input[i] == '!') {
+            pos2 = i
+
+            if (input[i - 1] == ')') {
+                x = true
+            }
+        }
+
+        if (x) {
+            if (i <= pos2 && input[i] == '(') {
+                pos1 = i
+                break  //! =====================================================
+            }
+        } else {
+            if (i <= pos2 && (input[i] == '+' || input[i] == '-' || input[i] == '*' || input[i] == '/')) {
+                pos1 = i + 1
+                break
+            }
+        }
+    }
+
+
+
+    fat = input.slice(pos1, pos2)
+    fat = fat.join('')
+    console.log(fat)
+    size = fat.length + 1
+    fat = solve_factorial(eval(fat))
+    input.splice(pos1, size)
+    input.splice(pos1, 0, fat)
 }
 
 function conversion(symbol, expression, no_parentheses = false) {
@@ -52,8 +102,6 @@ function conversion(symbol, expression, no_parentheses = false) {
                         if (verification(expressionArray, op)) break
                         if (verification(symbolsArray, op)) break
                     }
-
-                    insert_multiplication()
                 }
             }
         }
@@ -94,7 +142,12 @@ while (insert_expression != closed_expression) {
     closed_expression++
 }
 
+insert_multiplication()
+
+factorial()
+
+console.log(input)
 input = input.join('')
 console.log(input)
 
-console.log(eval(input))    
+console.log(eval(input))
