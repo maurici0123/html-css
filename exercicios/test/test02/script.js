@@ -1,4 +1,5 @@
-input = `2+((2)+2)!`
+console.time('time')
+input = `2+(3!)`
 input = input.split('')
 closed_expression = insert_expression = 0
 symbolsArray = ['√', 'log', 'sin', 'cos', 'tan', 'π', '^']
@@ -32,14 +33,14 @@ function insert_multiplication() {
 }
 
 function solve_factorial(n) {
-    if (n === 0) {
+    if (n == 0) {
         return 1
     }
     return n * solve_factorial(n - 1)
 }
 
 function factorial() {
-    pos2 = pos1 = 0
+    pos2 = pos1 = parentheses = 0
     x = false
 
     for (i = 0; i < input.length - 1; i++) {
@@ -55,12 +56,25 @@ function factorial() {
             if (input[i - 1] == ')') {
                 x = true
             }
+
+            if (input[i + 1] == ')') {
+                x = true
+                pos2 = i+2
+            }
+        }
+
+        if (input[i] == ')' && input[i] <= pos2) {
+            parentheses++
+        }
+
+        if (input[i] == '(' && input[i] <= pos2) {
+            parentheses--
         }
 
         if (x) {
-            if (i <= pos2 && input[i] == '(') {
+            if (i <= pos2 && input[i] == '(' || parentheses == -1) {
                 pos1 = i
-                break  //! =====================================================
+                break
             }
         } else {
             if (i <= pos2 && (input[i] == '+' || input[i] == '-' || input[i] == '*' || input[i] == '/')) {
@@ -70,15 +84,17 @@ function factorial() {
         }
     }
 
-
-
-    fat = input.slice(pos1, pos2)
-    fat = fat.join('')
-    console.log(fat)
-    size = fat.length + 1
-    fat = solve_factorial(eval(fat))
-    input.splice(pos1, size)
-    input.splice(pos1, 0, fat)
+    console.log(pos1)
+    console.log(pos2)
+    if (pos2 != 0) {
+        fat = input.slice(pos1, pos2)
+        fat = fat.join('')
+        fat = fat.replace(/!/, '')
+        size = fat.length + 1
+        fat = solve_factorial(eval(fat))
+        input.splice(pos1, size)
+        input.splice(pos1, 0, fat)
+    }
 }
 
 function conversion(symbol, expression, no_parentheses = false) {
@@ -146,8 +162,8 @@ insert_multiplication()
 
 factorial()
 
-console.log(input)
 input = input.join('')
 console.log(input)
 
 console.log(eval(input))
+console.timeEnd('time')

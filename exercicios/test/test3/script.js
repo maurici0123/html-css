@@ -1,10 +1,10 @@
-input = `0`
+const input = `44`
 
 function fatorial(n) {
-    if (n === 0) {
+    if (n == 0) {
         return 1
     }
     return n * fatorial(n - 1)
 }
 
-console.log(fatorial(0))
+console.log(fatorial(input))
