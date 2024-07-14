@@ -6,7 +6,7 @@ const btn_reset = document.getElementById('btn_reset')
 const btn_del = document.getElementById('btn_del')
 const btn_equal = document.getElementById('btn_equal')
 const header = document.getElementById('header')
-const input = document.querySelector('input')
+const input_range = document.querySelector('input')
 const styleElement = document.createElement('style');
 
 
@@ -69,7 +69,7 @@ document.querySelector('input').addEventListener('input', function(){
 
   header.style.color = 'hsl(0, 0%, 100%)'
 
-  input.style.backgroundColor = 'hsl(223, 31%, 20%)'
+  input_range.style.backgroundColor = 'hsl(223, 31%, 20%)'
   styleElement.appendChild(newStyle1);
   document.head.appendChild(styleElement);
 
@@ -106,7 +106,7 @@ document.querySelector('input').addEventListener('input', function(){
 
   header.style.color = 'hsl(60, 10%, 19%)'
 
-  input.style.backgroundColor = 'hsl(0, 5%, 81%)'
+  input_range.style.backgroundColor = 'hsl(0, 5%, 81%)'
   styleElement.appendChild(newStyle2);
   document.head.appendChild(styleElement);
 
@@ -143,7 +143,7 @@ document.querySelector('input').addEventListener('input', function(){
 
   header.style.color = 'hsl(52, 100%, 62%)'
 
-  input.style.backgroundColor = 'hsl(268, 71%, 12%)'
+  input_range.style.backgroundColor = 'hsl(268, 71%, 12%)'
   styleElement.appendChild(newStyle3);
   document.head.appendChild(styleElement);
   }
