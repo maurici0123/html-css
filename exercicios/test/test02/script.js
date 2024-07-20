@@ -181,4 +181,4 @@ function calcular(calc) {
     console.log('-=-=-=-=-=-=-=-=-=-=-')
 }
 
-calcular('!3')
+calcular('4+2')
