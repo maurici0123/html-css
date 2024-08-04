@@ -1,8 +1,16 @@
-const invalid = document.getElementById('invalid')
-const number = document.getElementById('number')
-const operator = document.getElementsByClassName('operator')
-resul = `` // Inicializa a variável 'resul' como uma string vazia. Esta variável armazenará a expressão aritmética que está sendo construída.
-r = 0 // Inicializa a variável 'r' como 0. Esta variável parece ser uma flag para controlar se o último botão pressionado foi o botão '=' (resultado).
+////////////////////////////////////////////////////////////////////////////////  Declaração das principais variavei
+const invalid = document.getElementById('invalid') // Onde aparecerá o aviso "operação inválida!"
+const expression = document.getElementById('number') // Tela da expressão
+const operator = document.getElementsByClassName('operator') // Operadores
+
+// Criando um array com todos os operadores
+const arrayOperator = []
+for (i = 0; i < operator.length; i++) {
+    arrayOperator.push(operator[i].value)
+}
+
+resul = `` // Inicializa a variável 'resul' como uma string vazia. Esta variável armazenará a expressão aritmética que está sendo construída
+r = 0 // Inicializa a variável 'r' como 0. Esta variável é uma flag para controlar se o último botão pressionado foi o botão '='
 
 // Obtém referências para vários elementos HTML que serão usados para controlar a funcionalidade de expandir/recolher da calculadora
 const expand = document.querySelector('#expand')
@@ -16,10 +24,11 @@ const chevron_up = '<i class="fa-solid fa-chevron-up"></i>'
 const chevron_left = '<i class="fa-solid fa-chevron-left"></i>'
 const chevron_right = '<i class="fa-solid fa-chevron-right"></i>'
 
+////////////////////////////////////////////////////////////////////////////////  Parte responsavel pela responsividade dos componentes
+
 bodyWidth = document.body.offsetWidth // Obtém a largura atual da janela do navegador em pixels
 
 // Define a aparência inicial do botão 'expand' e o layout da calculadora com base na largura da janela
-// Se a largura for menor ou igual a 830 pixels, assume-se que é uma tela menor e o layout é ajustado de acordo
 if (bodyWidth <= 830) {
     block = expand.innerHTML = chevron_down // Define o ícone do botão 'expand' para baixo
     none = chevron_up // Define o ícone para cima (usado quando a calculadora estiver expandida)
@@ -108,11 +117,12 @@ function Expand() {
     }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////  parte responsavel pelo calculo
 
 // Função para calcular o resultado de uma expressão matemática
 function calcular(calc) {
     input = calc // Atribui a expressão de entrada para a variável 'input'
+    console.log(input)
     input = input.split('') // Divide a expressão em um array de caracteres
     closed_expression = insert_expression = 0 // Inicializa as variáveis 'closed_expression' e 'insert_expression' como 0, provavelmente usadas para controlar a quantidade de parênteses
     symbolsArray = ['√', 'log', 'sin', 'cos', 'tan', 'π', '^'] // Array de símbolos matemáticos
@@ -259,7 +269,7 @@ function calcular(calc) {
         }
     }
 
-    //////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////// chamada das funções
 
     // Loop para substituir as funções matemáticas escritas por extenso por suas abreviações
     for (i = 0; i < input.length; i++) {
@@ -316,18 +326,28 @@ function delet() {
 
     resul = String(resul) // Converte 'resul' para string
 
-    resul = resul.slice(0, -1) // Remove o último caractere
+    if (resul[resul.length - 1] == 'g' || resul[resul.length - 1] == 'n' || resul[resul.length - 1] == 's') {
+        resul = resul.slice(0, -3) // Remove os últimos 3 caractere
+    } else {
+        resul = resul.slice(0, -1) // Remove o último caractere
+    }
 
     // Atualiza o display da calculadora, substituindo '*' por '×'
-    number.innerHTML = resul.replace(/\*/g, '<i class="fa-solid fa-xmark"></i>')
+    expression.innerHTML = resul.replace(/\*/g, '<i class="fa-solid fa-xmark"></i>')
 }
 
 // Função para calcular o resultado final da expressão
 function final_result() {
     try {
         resul = calcular(resul) // Chama a função 'calcular' para formatar a expressão
-        number.innerHTML = resul // Exibe o resultado no display
+        expression.innerHTML = resul // Exibe o resultado no display
         r = 1 // Sinaliza que o botão '=' foi pressionado
+
+        // Se o botão igual for acionado sem nada na expressão
+        if (typeof (resul) == 'undefined') {
+            resul = ''
+            expression.innerHTML = ''
+        }
     } catch (err) {
         // Exibe a mensagem de erro caso ocorra algum erro durante o cálculo
         invalid.innerHTML = 'operação inválida!'
@@ -338,7 +358,7 @@ function final_result() {
 function reset() {
     // Limpa a mensagem de erro, o display e reinicia as variáveis 'resul' e 'r'
     invalid.innerHTML = ``
-    number.innerHTML = ``
+    expression.innerHTML = ``
     resul = ``
     r = 0
 }
@@ -357,9 +377,9 @@ function operator_verification(n1) {
 // Função para inserir número/operador no display e na expressão
 function insert(n1) {
     if (n1 == '*') {
-        number.innerHTML += `<i class="fa-solid fa-xmark"></i>` // Exibe '×' para multiplicação
+        expression.innerHTML += `<i class="fa-solid fa-xmark"></i>` // Exibe '×' para multiplicação
     } else {
-        number.innerHTML += n1 // Insere o número/operador no display
+        expression.innerHTML += n1 // Insere o número/operador no display
     }
 
     resul += n1 // Adiciona o número/operador à expressão
@@ -387,23 +407,39 @@ function calc(n1) {
             insert(n1) // Insere o número/operador na expressão e no display
         }
     } else if (r == 1) { // Se o botão '=' foi pressionado
-        if (n1 == operator[0].value || n1 == operator[1].value || n1 == operator[2].value || n1 == operator[3].value) {
+        if (arrayOperator.includes(n1)) {
             // Se o novo input for um operador, adiciona à expressão atual
             if (n1 == '*') {
-                number.innerHTML += `<i class="fa-solid fa-xmark"></i>`
-            } else {    
-                number.innerHTML += n1
+                expression.innerHTML += `<i class="fa-solid fa-xmark"></i>`
+            } else {
+                expression.innerHTML += n1
             }
             resul += n1
         } else {
             // Se o novo input for um número, inicia uma nova expressão
             if (n1 == '*') {
-                number.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+                expression.innerHTML = `<i class="fa-solid fa-xmark"></i>`
             } else {
-                number.innerHTML = n1
+                expression.innerHTML = n1
             }
             resul = n1
         }
         r = 0 // Reinicia a flag 'r' para indicar que uma nova expressão está sendo iniciada
     }
 }
+
+// acionar a função final_result qundo o Enter for apertado
+document.body.addEventListener('keyup', (e) => {
+    console.log(e.key)
+    if (e.key === 'Enter') {
+        final_result()
+    } else if (!isNaN(e.key) || arrayOperator.includes(e.key)) {
+        calc(e.key) // chamando a função calc com o valor do caractere
+    } else if (e.key == 'Dead') { // chamando o botão Dead for acionado
+        calc('^') 
+    } else if (e.key == 'Backspace') { // chamando o botão Backspace for acionado
+        delet()
+    } else if (e.key == 'Escape') { // chamando o botão Esc for acionado
+        reset()
+    }
+})

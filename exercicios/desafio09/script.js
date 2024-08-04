@@ -40,8 +40,8 @@ const weatherdata = async (city) => {
         weathercontainer.classList.remove('hide')
         messageelement.classList.add('hide')
 
-        const urlbackgroundready = data.name.split(' ')
-        document.body.style.backgroundImage = `url(${urlbackground}+${urlbackgroundready.join('%20')})`
+        //!const urlbackgroundready = data.name.split(' ')
+        //!document.body.style.backgroundImage = `url(${urlbackground}+${urlbackgroundready.join('%20')})`
         document.body.style.backgroundSize = 'cover'
     } else {
         cityselement.style.display = 'none'
